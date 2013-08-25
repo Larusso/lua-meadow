@@ -291,6 +291,7 @@
 				C34B5BBD17C2707400C073A6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
