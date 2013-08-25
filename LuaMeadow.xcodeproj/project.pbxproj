@@ -11,6 +11,7 @@
 		C34B5BB817C2707400C073A6 /* LuaMeadow.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = C34B5BB717C2707400C073A6 /* LuaMeadow.1 */; };
 		C34B5CE217C27C6E00C073A6 /* liblua.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C34B5CE117C27C6E00C073A6 /* liblua.a */; };
 		C34B5CE417C27D8200C073A6 /* luascript.lua in CopyFiles */ = {isa = PBXBuildFile; fileRef = C34B5CE317C27D5A00C073A6 /* luascript.lua */; };
+		C3EAF9F317CA153100A508F8 /* DWApplication.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C3EAF9F117CA153100A508F8 /* DWApplication.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -58,6 +59,8 @@
 		C34B5CDF17C27B2600C073A6 /* lua.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = lua.hpp; path = "libs/lua-5.2.2/src/lua.hpp"; sourceTree = "<group>"; };
 		C34B5CE117C27C6E00C073A6 /* liblua.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = liblua.a; path = "libs/lua-5.2.2/src/liblua.a"; sourceTree = "<group>"; };
 		C34B5CE317C27D5A00C073A6 /* luascript.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = luascript.lua; sourceTree = "<group>"; };
+		C3EAF9F117CA153100A508F8 /* DWApplication.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DWApplication.cpp; sourceTree = "<group>"; };
+		C3EAF9F217CA153100A508F8 /* DWApplication.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DWApplication.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +99,8 @@
 				C34B5CE317C27D5A00C073A6 /* luascript.lua */,
 				C34B5BB517C2707400C073A6 /* main.cpp */,
 				C34B5BB717C2707400C073A6 /* LuaMeadow.1 */,
+				C3EAF9F117CA153100A508F8 /* DWApplication.cpp */,
+				C3EAF9F217CA153100A508F8 /* DWApplication.h */,
 			);
 			path = LuaMeadow;
 			sourceTree = "<group>";
@@ -184,6 +189,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C34B5BB617C2707400C073A6 /* main.cpp in Sources */,
+				C3EAF9F317CA153100A508F8 /* DWApplication.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
