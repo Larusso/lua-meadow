@@ -18,6 +18,7 @@ public:
     ~DWMediator();
     void release();
     void printType();
+    void move(int x, int y);
 };
 
 #endif /* defined(__LuaMeadow__DWMediator__) */

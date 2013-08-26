@@ -95,6 +95,26 @@ static int printMediator(lua_State *L)
     (*mediator)->printType();
     return 0;
 }
+    
+    static int moveMediator(lua_State *L)
+    {
+        int n = lua_gettop(L);  // Number of arguments
+        if (n != 3)
+            return luaL_error(L, "Got %d arguments expected 3 (class,x,y)", n);
+        
+        luaL_checktype(L, 1, LUA_TTABLE);
+        luaL_checktype(L, 2, LUA_TNUMBER);
+        luaL_checktype(L, 3, LUA_TNUMBER);
+        
+        int x = luaL_checknumber (L, 2);
+        int y = luaL_checknumber (L, 3);
+        
+        lua_getfield(L,1,"__self");
+        DWMediator **mediator = static_cast<DWMediator **>(luaL_checkudata(L, -1, "dire.Mediator"));
+        (*mediator)->move(x, y);
+        
+        return 0;
+    }
 
 static int destroyMediator(lua_State *L)
 {
@@ -112,6 +132,7 @@ static int registerMediatorTable(lua_State *L)
             // Creation
             {"new", newMediator},
             {"print", printMediator},
+            {"move",moveMediator},
             {"__gc", destroyMediator},
             {NULL, NULL}
     };

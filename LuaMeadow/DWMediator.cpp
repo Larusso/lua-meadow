@@ -27,3 +27,8 @@ void DWMediator::printType()
 {
     std::cout << "++ ------- printType called" << std::endl;
 }
+
+void DWMediator::move(int x, int y)
+{
+    printf("++ ------- move called x:%d, y:%d\n", x,y);
+}

@@ -18,6 +18,7 @@ mediator:print()
 
 local mediator3 = mediator:new()
 mediator3:print()
+mediator3:move(20,40)
 -- pretty.dump(mediator2)
 
 -- mediator:doit()
