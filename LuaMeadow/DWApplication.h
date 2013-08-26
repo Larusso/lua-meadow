@@ -27,6 +27,7 @@ private:
     lua_State *L;
     std::list<int> theList;
     void registerListType();
+    void registerMediatorType();
     void runScript();
 };
 

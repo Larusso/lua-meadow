@@ -1,13 +1,28 @@
-function entries(arg) -- iterator
-    return function()
-        return arg:pop();
-    end
+local dire = require 'direwolf'
+local pretty = require 'pl.pretty'
+-- pretty.dump(pretty)
+pretty.dump(dire)
+
+local mediator = dire.Mediator:new()
+local mediator2 = dire.Mediator:new()
+
+
+mediator.doit = function(self)
+    print("I did it")
 end
 
-for i in entries(the_list) do
-    io.write("From LUA:  ", i, "\n")
-end
 
-for i=1,10 do
-    the_list:push(50+i*100);
-end
+pretty.dump(mediator)
+pretty.dump(getmetatable(mediator))
+mediator:print()
+
+local mediator3 = mediator:new()
+mediator3:print()
+-- pretty.dump(mediator2)
+
+-- mediator:doit()
+-- error mediator2:doit()
+
+mediator = nil
+collectgarbage();
+print(getmetatable(self))

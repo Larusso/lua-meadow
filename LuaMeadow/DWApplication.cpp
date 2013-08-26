@@ -7,77 +7,181 @@
 //
 
 #include "DWApplication.h"
+#include "DWMediator.h"
 
 #pragma mark - LUA stack manipulation
 
 extern "C" {
-    static int l_list_push(lua_State *L) { // Push elements from LUA
-        assert(lua_gettop(L) == 2); // check that the number of args is exactly 2
-        std::list<int> **ud = static_cast<std::list<int> **>(luaL_checkudata(L,1, "ListMT")); // first arg is the list
-        int v =luaL_checkint(L,2); // seconds argument is the integer to be pushed to the std::list<int>
-        (*ud)->push_back(v); // perform the push on C++ object through the pointer stored in user data
-        return 0; // we return 0 values in the lua stack
-    }
-    static int l_list_pop(lua_State *L) {
-        assert(lua_gettop(L) == 1); // check that the number of args is exactly 1
-        std::list<int> **ud = static_cast<std::list<int> **>(luaL_checkudata(L, 1, "ListMT")); // first arg is the userdata
-        if ((*ud)->empty()) {
-            lua_pushnil(L);
-            return 1; // if list is empty the function will return nil
+
+void stackdump_g(lua_State *l)
+{
+    int i;
+    int top = lua_gettop(l);
+
+    printf("total in stack %d\n", top);
+
+    for (i = 1; i <= top; i++)
+    {  /* repeat for each level */
+        int t = lua_type(l, i);
+        switch (t)
+        {
+            case LUA_TSTRING:  /* strings */
+                printf("string: '%s'\n", lua_tostring(l, i));
+                break;
+            case LUA_TBOOLEAN:  /* booleans */
+                printf("boolean %s\n", lua_toboolean(l, i) ? "true" : "false");
+                break;
+            case LUA_TNUMBER:  /* numbers */
+                printf("number: %g\n", lua_tonumber(l, i));
+                break;
+            default:  /* other values */
+                printf("%s\n", lua_typename(l, t));
+                break;
         }
-        lua_pushnumber(L,(*ud)->front()); // push the value to pop in the lua stack
-                                          // it will be the return value of the function in lua
-        (*ud)->pop_front(); // remove the value from the list
-        return 1; //we return 1 value in the stack
+        printf("  ");  /* put a separator */
     }
+    printf("\n");  /* end the listing */
+}
+
+static int newMediator(lua_State *L)
+{
+    int n = lua_gettop(L);  // Number of arguments
+    if (n != 1)
+        return luaL_error(L, "Got %d arguments expected 1 (class)", n);
+    // First argument is now a table that represent the class to instantiate
+    luaL_checktype(L, 1, LUA_TTABLE);
+
+    lua_newtable(L);      // Create table to represent instance
+
+    // Set first argument of new to metatable of instance
+    lua_pushvalue(L, 1);
+    lua_setmetatable(L, -2);
+
+    // Do function lookups in metatable
+    lua_pushvalue(L, 1);
+    lua_setfield(L, 1, "__index");
+
+    // Allocate memory for a pointer to to object
+    DWMediator **s = (DWMediator **) lua_newuserdata(L, sizeof(DWMediator *));
+
+    //double x = luaL_checknumber (L, 2);
+    //double y = luaL_checknumber (L, 3);
+    //double dir = luaL_checknumber (L, 4);
+    //double speed = luaL_checknumber (L, 5);
+
+    *s = new DWMediator();
+
+    // Get metatable 'dire.Mediator' store in the registry
+    luaL_getmetatable(L, "dire.Mediator");
+
+    // Set user data for Sprite to use this metatable
+    lua_setmetatable(L, -2);
+
+    // Set field '__self' of instance table to the sprite user data
+    lua_setfield(L, -2, "__self");
+
+    return 1;
+}
+
+static int printMediator(lua_State *L)
+{
+    int n = lua_gettop(L);  // Number of arguments
+    if (n != 1)
+        return luaL_error(L, "Got %d arguments expected 1 (class)", n);
+    // First argument is now a table that represent the class to instantiate
+    luaL_checktype(L, 1, LUA_TTABLE);
+    lua_getfield(L,1,"__self");
+    DWMediator **mediator = static_cast<DWMediator **>(luaL_checkudata(L, -1, "dire.Mediator"));
+    (*mediator)->printType();
+    return 0;
+}
+
+static int destroyMediator(lua_State *L)
+{
+    DWMediator *mediator = 0;
+
+    //checkUserData(L, "dire.Mediator", mediator);
+    mediator->release();
+    return 0;
 }
 
 
+static int registerMediatorTable(lua_State *L)
+{
+    static const luaL_Reg gMediatorFuncs[] = {
+            // Creation
+            {"new", newMediator},
+            {"print", printMediator},
+            {"__gc", destroyMediator},
+            {NULL, NULL}
+    };
 
-DWApplication::DWApplication() {
+    luaL_newlib(L, gMediatorFuncs );
+    return 1;
+}
+
+static int luaOpen_direwolf(lua_State *L)
+{
+    registerMediatorTable(L);
+
+    luaL_newmetatable(L, "dire.Mediator");
+    lua_pushvalue(L, -2);
+    lua_setfield(L, -2, "__index");
+
+    lua_newtable(L);
+    lua_pushvalue(L, -3);
+    lua_setfield(L, -2, "Mediator");
+    return 1;
+}
+}
+
+
+DWApplication::DWApplication()
+{
     L = luaL_newstate();
     luaL_openlibs(L);
 }
 
-DWApplication::~DWApplication() {
+DWApplication::~DWApplication()
+{
     lua_close(L);
 }
 
-void DWApplication::runScript() {
-    lua_settop(L,0); //empty the lua stack
-    if(luaL_dofile(L, "./luascript.lua")) {
-        fprintf(stderr, "error: %s\n", lua_tostring(L,-1));
-        lua_pop(L,1);
+void DWApplication::runScript()
+{
+    lua_settop(L, 0); //empty the lua stack
+    if (luaL_dofile(L, "./luascript.lua"))
+    {
+        fprintf(stderr, "error: %s\n", lua_tostring(L, -1));
+        lua_pop(L, 1);
         exit(1);
     }
     assert(lua_gettop(L) == 0); //empty the lua stack
 }
 
-void DWApplication::registerListType() {
-    std::cout << "Set the list object in lua" << std::endl;
-    luaL_newmetatable(L, "ListMT");
-    lua_pushvalue(L,-1);
-    lua_setfield(L,-2, "__index"); // ListMT .__index = ListMT
-    lua_pushcfunction(L, l_list_push);
-    lua_setfield(L,-2, "push"); // push in lua will call l_list_push in C++
-    lua_pushcfunction(L, l_list_pop);
-    lua_setfield(L,-2, "pop"); // pop in lua will call l_list_pop in C++
+void DWApplication::registerMediatorType()
+{
+    std::cout << "set the mediator class in lua" << std::endl;
+    luaL_openlibs(L);
+    luaL_requiref(L, "direwolf", luaOpen_direwolf, 1);
 }
 
-void DWApplication::run() {
-    for(unsigned int i = 0; i<10; i++) // add some input data to the list
-        theList.push_back(i*100);
-    registerListType();
-    std::cout << "creating an instance of std::list in lua" << std::endl;
-    std::list<int> **ud = static_cast<std::list<int> **>(lua_newuserdata(L, sizeof(std::list<int> *)));
-    *(ud) = &theList;
-    luaL_setmetatable(L, "ListMT"); // set userdata metatable
-    lua_setglobal(L, "the_list"); // the_list in lua points to the new userdata
-    
+void DWApplication::registerListType()
+{
+    std::cout << "Set the list object in lua" << std::endl;
+    luaL_newmetatable(L, "ListMT");
+    lua_pushvalue(L, -1);
+    lua_setfield(L, -2, "__index"); // ListMT .__index = ListMT
+    //lua_pushcclosure(L, (l_list_push), 0);
+    //lua_pushcfunction(L, l_list_push);
+    lua_setfield(L, -2, "push"); // push in lua will call l_list_push in C++
+    // lua_pushcfunction(L, l_list_pop);
+    lua_setfield(L, -2, "pop"); // pop in lua will call l_list_pop in C++
+}
+
+void DWApplication::run()
+{
+
+    registerMediatorType();
     runScript();
-    
-    while(!theList.empty()) { // read the data that lua left in the list
-        std::cout << "from C++: pop value " << theList.front() << std::endl;
-        theList.pop_front();
-    }
 }

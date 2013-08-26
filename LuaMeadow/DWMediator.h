@@ -1,0 +1,23 @@
+//
+//  DWMediator.h
+//  LuaMeadow
+//
+//  Created by Larusso on 25.08.13.
+//  Copyright (c) 2013 Larusso. All rights reserved.
+//
+
+#ifndef __LuaMeadow__DWMediator__
+#define __LuaMeadow__DWMediator__
+
+#include <iostream>
+
+class DWMediator
+{
+public:
+    DWMediator();
+    ~DWMediator();
+    void release();
+    void printType();
+};
+
+#endif /* defined(__LuaMeadow__DWMediator__) */

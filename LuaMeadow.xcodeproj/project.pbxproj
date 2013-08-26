@@ -12,6 +12,45 @@
 		C34B5CE217C27C6E00C073A6 /* liblua.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C34B5CE117C27C6E00C073A6 /* liblua.a */; };
 		C34B5CE417C27D8200C073A6 /* luascript.lua in CopyFiles */ = {isa = PBXBuildFile; fileRef = C34B5CE317C27D5A00C073A6 /* luascript.lua */; };
 		C3EAF9F317CA153100A508F8 /* DWApplication.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C3EAF9F117CA153100A508F8 /* DWApplication.cpp */; };
+		C3EAF9F717CA761200A508F8 /* DWMediator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C3EAF9F517CA761200A508F8 /* DWMediator.cpp */; };
+		C3EAFA6A17CA8FC200A508F8 /* app.lua in CopyFiles */ = {isa = PBXBuildFile; fileRef = C3EAF9F917CA8EE000A508F8 /* app.lua */; };
+		C3EAFA6B17CA8FC200A508F8 /* array2d.lua in CopyFiles */ = {isa = PBXBuildFile; fileRef = C3EAF9FA17CA8EE000A508F8 /* array2d.lua */; };
+		C3EAFA6C17CA8FC200A508F8 /* class.lua in CopyFiles */ = {isa = PBXBuildFile; fileRef = C3EAF9FB17CA8EE000A508F8 /* class.lua */; };
+		C3EAFA6D17CA8FC200A508F8 /* compat.lua in CopyFiles */ = {isa = PBXBuildFile; fileRef = C3EAF9FC17CA8EE000A508F8 /* compat.lua */; };
+		C3EAFA6E17CA8FC200A508F8 /* comprehension.lua in CopyFiles */ = {isa = PBXBuildFile; fileRef = C3EAF9FD17CA8EE000A508F8 /* comprehension.lua */; };
+		C3EAFA6F17CA8FC200A508F8 /* config.lua in CopyFiles */ = {isa = PBXBuildFile; fileRef = C3EAF9FE17CA8EE000A508F8 /* config.lua */; };
+		C3EAFA7017CA8FC200A508F8 /* data.lua in CopyFiles */ = {isa = PBXBuildFile; fileRef = C3EAF9FF17CA8EE000A508F8 /* data.lua */; };
+		C3EAFA7117CA8FC200A508F8 /* Date.lua in CopyFiles */ = {isa = PBXBuildFile; fileRef = C3EAFA0017CA8EE000A508F8 /* Date.lua */; };
+		C3EAFA7217CA8FC200A508F8 /* dir.lua in CopyFiles */ = {isa = PBXBuildFile; fileRef = C3EAFA0117CA8EE000A508F8 /* dir.lua */; };
+		C3EAFA7317CA8FC200A508F8 /* file.lua in CopyFiles */ = {isa = PBXBuildFile; fileRef = C3EAFA0217CA8EE000A508F8 /* file.lua */; };
+		C3EAFA7417CA8FC200A508F8 /* func.lua in CopyFiles */ = {isa = PBXBuildFile; fileRef = C3EAFA0317CA8EE000A508F8 /* func.lua */; };
+		C3EAFA7517CA8FC200A508F8 /* import_into.lua in CopyFiles */ = {isa = PBXBuildFile; fileRef = C3EAFA0417CA8EE000A508F8 /* import_into.lua */; };
+		C3EAFA7617CA8FC200A508F8 /* init.lua in CopyFiles */ = {isa = PBXBuildFile; fileRef = C3EAFA0517CA8EE000A508F8 /* init.lua */; };
+		C3EAFA7717CA8FC200A508F8 /* input.lua in CopyFiles */ = {isa = PBXBuildFile; fileRef = C3EAFA0617CA8EE000A508F8 /* input.lua */; };
+		C3EAFA7817CA8FC200A508F8 /* lapp.lua in CopyFiles */ = {isa = PBXBuildFile; fileRef = C3EAFA0717CA8EE000A508F8 /* lapp.lua */; };
+		C3EAFA7917CA8FC200A508F8 /* lexer.lua in CopyFiles */ = {isa = PBXBuildFile; fileRef = C3EAFA0817CA8EE000A508F8 /* lexer.lua */; };
+		C3EAFA7A17CA8FC200A508F8 /* List.lua in CopyFiles */ = {isa = PBXBuildFile; fileRef = C3EAFA0917CA8EE000A508F8 /* List.lua */; };
+		C3EAFA7B17CA8FC200A508F8 /* luabalanced.lua in CopyFiles */ = {isa = PBXBuildFile; fileRef = C3EAFA0A17CA8EE000A508F8 /* luabalanced.lua */; };
+		C3EAFA7C17CA8FC200A508F8 /* Map.lua in CopyFiles */ = {isa = PBXBuildFile; fileRef = C3EAFA0B17CA8EE000A508F8 /* Map.lua */; };
+		C3EAFA7D17CA8FC200A508F8 /* MultiMap.lua in CopyFiles */ = {isa = PBXBuildFile; fileRef = C3EAFA0C17CA8EE000A508F8 /* MultiMap.lua */; };
+		C3EAFA7E17CA8FC200A508F8 /* operator.lua in CopyFiles */ = {isa = PBXBuildFile; fileRef = C3EAFA0D17CA8EE000A508F8 /* operator.lua */; };
+		C3EAFA7F17CA8FC200A508F8 /* OrderedMap.lua in CopyFiles */ = {isa = PBXBuildFile; fileRef = C3EAFA0E17CA8EE000A508F8 /* OrderedMap.lua */; };
+		C3EAFA8017CA8FC200A508F8 /* path.lua in CopyFiles */ = {isa = PBXBuildFile; fileRef = C3EAFA0F17CA8EE000A508F8 /* path.lua */; };
+		C3EAFA8117CA8FC200A508F8 /* permute.lua in CopyFiles */ = {isa = PBXBuildFile; fileRef = C3EAFA1017CA8EE000A508F8 /* permute.lua */; };
+		C3EAFA8217CA8FC200A508F8 /* pretty.lua in CopyFiles */ = {isa = PBXBuildFile; fileRef = C3EAFA1117CA8EE000A508F8 /* pretty.lua */; };
+		C3EAFA8317CA8FC200A508F8 /* seq.lua in CopyFiles */ = {isa = PBXBuildFile; fileRef = C3EAFA1217CA8EE000A508F8 /* seq.lua */; };
+		C3EAFA8417CA8FC200A508F8 /* Set.lua in CopyFiles */ = {isa = PBXBuildFile; fileRef = C3EAFA1317CA8EE000A508F8 /* Set.lua */; };
+		C3EAFA8517CA8FC200A508F8 /* sip.lua in CopyFiles */ = {isa = PBXBuildFile; fileRef = C3EAFA1417CA8EE000A508F8 /* sip.lua */; };
+		C3EAFA8617CA8FC200A508F8 /* strict.lua in CopyFiles */ = {isa = PBXBuildFile; fileRef = C3EAFA1517CA8EE000A508F8 /* strict.lua */; };
+		C3EAFA8717CA8FC200A508F8 /* stringio.lua in CopyFiles */ = {isa = PBXBuildFile; fileRef = C3EAFA1617CA8EE000A508F8 /* stringio.lua */; };
+		C3EAFA8817CA8FC200A508F8 /* stringx.lua in CopyFiles */ = {isa = PBXBuildFile; fileRef = C3EAFA1717CA8EE000A508F8 /* stringx.lua */; };
+		C3EAFA8917CA8FC200A508F8 /* tablex.lua in CopyFiles */ = {isa = PBXBuildFile; fileRef = C3EAFA1817CA8EE000A508F8 /* tablex.lua */; };
+		C3EAFA8A17CA8FC200A508F8 /* template.lua in CopyFiles */ = {isa = PBXBuildFile; fileRef = C3EAFA1917CA8EE000A508F8 /* template.lua */; };
+		C3EAFA8B17CA8FC200A508F8 /* test.lua in CopyFiles */ = {isa = PBXBuildFile; fileRef = C3EAFA1A17CA8EE000A508F8 /* test.lua */; };
+		C3EAFA8C17CA8FC200A508F8 /* text.lua in CopyFiles */ = {isa = PBXBuildFile; fileRef = C3EAFA1B17CA8EE000A508F8 /* text.lua */; };
+		C3EAFA8D17CA8FC200A508F8 /* utils.lua in CopyFiles */ = {isa = PBXBuildFile; fileRef = C3EAFA1C17CA8EE000A508F8 /* utils.lua */; };
+		C3EAFA8E17CA8FC200A508F8 /* xml.lua in CopyFiles */ = {isa = PBXBuildFile; fileRef = C3EAFA1D17CA8EE000A508F8 /* xml.lua */; };
+		FD2470FAE9B6E2173C1DC7F0 /* DWController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FD247ACE4E2218207B9160F8 /* DWController.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -23,6 +62,52 @@
 			files = (
 				C34B5CE417C27D8200C073A6 /* luascript.lua in CopyFiles */,
 				C34B5BB817C2707400C073A6 /* LuaMeadow.1 in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C3EAFA6917CA8FB300A508F8 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = pl;
+			dstSubfolderSpec = 16;
+			files = (
+				C3EAFA6A17CA8FC200A508F8 /* app.lua in CopyFiles */,
+				C3EAFA6B17CA8FC200A508F8 /* array2d.lua in CopyFiles */,
+				C3EAFA6C17CA8FC200A508F8 /* class.lua in CopyFiles */,
+				C3EAFA6D17CA8FC200A508F8 /* compat.lua in CopyFiles */,
+				C3EAFA6E17CA8FC200A508F8 /* comprehension.lua in CopyFiles */,
+				C3EAFA6F17CA8FC200A508F8 /* config.lua in CopyFiles */,
+				C3EAFA7017CA8FC200A508F8 /* data.lua in CopyFiles */,
+				C3EAFA7117CA8FC200A508F8 /* Date.lua in CopyFiles */,
+				C3EAFA7217CA8FC200A508F8 /* dir.lua in CopyFiles */,
+				C3EAFA7317CA8FC200A508F8 /* file.lua in CopyFiles */,
+				C3EAFA7417CA8FC200A508F8 /* func.lua in CopyFiles */,
+				C3EAFA7517CA8FC200A508F8 /* import_into.lua in CopyFiles */,
+				C3EAFA7617CA8FC200A508F8 /* init.lua in CopyFiles */,
+				C3EAFA7717CA8FC200A508F8 /* input.lua in CopyFiles */,
+				C3EAFA7817CA8FC200A508F8 /* lapp.lua in CopyFiles */,
+				C3EAFA7917CA8FC200A508F8 /* lexer.lua in CopyFiles */,
+				C3EAFA7A17CA8FC200A508F8 /* List.lua in CopyFiles */,
+				C3EAFA7B17CA8FC200A508F8 /* luabalanced.lua in CopyFiles */,
+				C3EAFA7C17CA8FC200A508F8 /* Map.lua in CopyFiles */,
+				C3EAFA7D17CA8FC200A508F8 /* MultiMap.lua in CopyFiles */,
+				C3EAFA7E17CA8FC200A508F8 /* operator.lua in CopyFiles */,
+				C3EAFA7F17CA8FC200A508F8 /* OrderedMap.lua in CopyFiles */,
+				C3EAFA8017CA8FC200A508F8 /* path.lua in CopyFiles */,
+				C3EAFA8117CA8FC200A508F8 /* permute.lua in CopyFiles */,
+				C3EAFA8217CA8FC200A508F8 /* pretty.lua in CopyFiles */,
+				C3EAFA8317CA8FC200A508F8 /* seq.lua in CopyFiles */,
+				C3EAFA8417CA8FC200A508F8 /* Set.lua in CopyFiles */,
+				C3EAFA8517CA8FC200A508F8 /* sip.lua in CopyFiles */,
+				C3EAFA8617CA8FC200A508F8 /* strict.lua in CopyFiles */,
+				C3EAFA8717CA8FC200A508F8 /* stringio.lua in CopyFiles */,
+				C3EAFA8817CA8FC200A508F8 /* stringx.lua in CopyFiles */,
+				C3EAFA8917CA8FC200A508F8 /* tablex.lua in CopyFiles */,
+				C3EAFA8A17CA8FC200A508F8 /* template.lua in CopyFiles */,
+				C3EAFA8B17CA8FC200A508F8 /* test.lua in CopyFiles */,
+				C3EAFA8C17CA8FC200A508F8 /* text.lua in CopyFiles */,
+				C3EAFA8D17CA8FC200A508F8 /* utils.lua in CopyFiles */,
+				C3EAFA8E17CA8FC200A508F8 /* xml.lua in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,6 +146,47 @@
 		C34B5CE317C27D5A00C073A6 /* luascript.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = luascript.lua; sourceTree = "<group>"; };
 		C3EAF9F117CA153100A508F8 /* DWApplication.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DWApplication.cpp; sourceTree = "<group>"; };
 		C3EAF9F217CA153100A508F8 /* DWApplication.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DWApplication.h; sourceTree = "<group>"; };
+		C3EAF9F517CA761200A508F8 /* DWMediator.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DWMediator.cpp; sourceTree = "<group>"; };
+		C3EAF9F617CA761200A508F8 /* DWMediator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DWMediator.h; sourceTree = "<group>"; };
+		C3EAF9F917CA8EE000A508F8 /* app.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = app.lua; sourceTree = "<group>"; };
+		C3EAF9FA17CA8EE000A508F8 /* array2d.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = array2d.lua; sourceTree = "<group>"; };
+		C3EAF9FB17CA8EE000A508F8 /* class.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = class.lua; sourceTree = "<group>"; };
+		C3EAF9FC17CA8EE000A508F8 /* compat.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = compat.lua; sourceTree = "<group>"; };
+		C3EAF9FD17CA8EE000A508F8 /* comprehension.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = comprehension.lua; sourceTree = "<group>"; };
+		C3EAF9FE17CA8EE000A508F8 /* config.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = config.lua; sourceTree = "<group>"; };
+		C3EAF9FF17CA8EE000A508F8 /* data.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = data.lua; sourceTree = "<group>"; };
+		C3EAFA0017CA8EE000A508F8 /* Date.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Date.lua; sourceTree = "<group>"; };
+		C3EAFA0117CA8EE000A508F8 /* dir.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = dir.lua; sourceTree = "<group>"; };
+		C3EAFA0217CA8EE000A508F8 /* file.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = file.lua; sourceTree = "<group>"; };
+		C3EAFA0317CA8EE000A508F8 /* func.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = func.lua; sourceTree = "<group>"; };
+		C3EAFA0417CA8EE000A508F8 /* import_into.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = import_into.lua; sourceTree = "<group>"; };
+		C3EAFA0517CA8EE000A508F8 /* init.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = init.lua; sourceTree = "<group>"; };
+		C3EAFA0617CA8EE000A508F8 /* input.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = input.lua; sourceTree = "<group>"; };
+		C3EAFA0717CA8EE000A508F8 /* lapp.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = lapp.lua; sourceTree = "<group>"; };
+		C3EAFA0817CA8EE000A508F8 /* lexer.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = lexer.lua; sourceTree = "<group>"; };
+		C3EAFA0917CA8EE000A508F8 /* List.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = List.lua; sourceTree = "<group>"; };
+		C3EAFA0A17CA8EE000A508F8 /* luabalanced.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = luabalanced.lua; sourceTree = "<group>"; };
+		C3EAFA0B17CA8EE000A508F8 /* Map.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Map.lua; sourceTree = "<group>"; };
+		C3EAFA0C17CA8EE000A508F8 /* MultiMap.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = MultiMap.lua; sourceTree = "<group>"; };
+		C3EAFA0D17CA8EE000A508F8 /* operator.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = operator.lua; sourceTree = "<group>"; };
+		C3EAFA0E17CA8EE000A508F8 /* OrderedMap.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = OrderedMap.lua; sourceTree = "<group>"; };
+		C3EAFA0F17CA8EE000A508F8 /* path.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = path.lua; sourceTree = "<group>"; };
+		C3EAFA1017CA8EE000A508F8 /* permute.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = permute.lua; sourceTree = "<group>"; };
+		C3EAFA1117CA8EE000A508F8 /* pretty.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = pretty.lua; sourceTree = "<group>"; };
+		C3EAFA1217CA8EE000A508F8 /* seq.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = seq.lua; sourceTree = "<group>"; };
+		C3EAFA1317CA8EE000A508F8 /* Set.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Set.lua; sourceTree = "<group>"; };
+		C3EAFA1417CA8EE000A508F8 /* sip.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = sip.lua; sourceTree = "<group>"; };
+		C3EAFA1517CA8EE000A508F8 /* strict.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = strict.lua; sourceTree = "<group>"; };
+		C3EAFA1617CA8EE000A508F8 /* stringio.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = stringio.lua; sourceTree = "<group>"; };
+		C3EAFA1717CA8EE000A508F8 /* stringx.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = stringx.lua; sourceTree = "<group>"; };
+		C3EAFA1817CA8EE000A508F8 /* tablex.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = tablex.lua; sourceTree = "<group>"; };
+		C3EAFA1917CA8EE000A508F8 /* template.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = template.lua; sourceTree = "<group>"; };
+		C3EAFA1A17CA8EE000A508F8 /* test.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = test.lua; sourceTree = "<group>"; };
+		C3EAFA1B17CA8EE000A508F8 /* text.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = text.lua; sourceTree = "<group>"; };
+		C3EAFA1C17CA8EE000A508F8 /* utils.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = utils.lua; sourceTree = "<group>"; };
+		C3EAFA1D17CA8EE000A508F8 /* xml.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = xml.lua; sourceTree = "<group>"; };
+		FD2476D337B81B118CDB7EBD /* DWController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DWController.h; sourceTree = "<group>"; };
+		FD247ACE4E2218207B9160F8 /* DWController.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DWController.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +222,8 @@
 		C34B5BB417C2707400C073A6 /* LuaMeadow */ = {
 			isa = PBXGroup;
 			children = (
+				C3EAF9F817CA8EE000A508F8 /* pl */,
+				C3EAF9F417CA75EB00A508F8 /* export */,
 				C34B5CE317C27D5A00C073A6 /* luascript.lua */,
 				C34B5BB517C2707400C073A6 /* main.cpp */,
 				C34B5BB717C2707400C073A6 /* LuaMeadow.1 */,
@@ -137,6 +265,61 @@
 			name = lua;
 			sourceTree = "<group>";
 		};
+		C3EAF9F417CA75EB00A508F8 /* export */ = {
+			isa = PBXGroup;
+			children = (
+				C3EAF9F517CA761200A508F8 /* DWMediator.cpp */,
+				C3EAF9F617CA761200A508F8 /* DWMediator.h */,
+				FD247ACE4E2218207B9160F8 /* DWController.cpp */,
+				FD2476D337B81B118CDB7EBD /* DWController.h */,
+			);
+			name = export;
+			sourceTree = "<group>";
+		};
+		C3EAF9F817CA8EE000A508F8 /* pl */ = {
+			isa = PBXGroup;
+			children = (
+				C3EAF9F917CA8EE000A508F8 /* app.lua */,
+				C3EAF9FA17CA8EE000A508F8 /* array2d.lua */,
+				C3EAF9FB17CA8EE000A508F8 /* class.lua */,
+				C3EAF9FC17CA8EE000A508F8 /* compat.lua */,
+				C3EAF9FD17CA8EE000A508F8 /* comprehension.lua */,
+				C3EAF9FE17CA8EE000A508F8 /* config.lua */,
+				C3EAF9FF17CA8EE000A508F8 /* data.lua */,
+				C3EAFA0017CA8EE000A508F8 /* Date.lua */,
+				C3EAFA0117CA8EE000A508F8 /* dir.lua */,
+				C3EAFA0217CA8EE000A508F8 /* file.lua */,
+				C3EAFA0317CA8EE000A508F8 /* func.lua */,
+				C3EAFA0417CA8EE000A508F8 /* import_into.lua */,
+				C3EAFA0517CA8EE000A508F8 /* init.lua */,
+				C3EAFA0617CA8EE000A508F8 /* input.lua */,
+				C3EAFA0717CA8EE000A508F8 /* lapp.lua */,
+				C3EAFA0817CA8EE000A508F8 /* lexer.lua */,
+				C3EAFA0917CA8EE000A508F8 /* List.lua */,
+				C3EAFA0A17CA8EE000A508F8 /* luabalanced.lua */,
+				C3EAFA0B17CA8EE000A508F8 /* Map.lua */,
+				C3EAFA0C17CA8EE000A508F8 /* MultiMap.lua */,
+				C3EAFA0D17CA8EE000A508F8 /* operator.lua */,
+				C3EAFA0E17CA8EE000A508F8 /* OrderedMap.lua */,
+				C3EAFA0F17CA8EE000A508F8 /* path.lua */,
+				C3EAFA1017CA8EE000A508F8 /* permute.lua */,
+				C3EAFA1117CA8EE000A508F8 /* pretty.lua */,
+				C3EAFA1217CA8EE000A508F8 /* seq.lua */,
+				C3EAFA1317CA8EE000A508F8 /* Set.lua */,
+				C3EAFA1417CA8EE000A508F8 /* sip.lua */,
+				C3EAFA1517CA8EE000A508F8 /* strict.lua */,
+				C3EAFA1617CA8EE000A508F8 /* stringio.lua */,
+				C3EAFA1717CA8EE000A508F8 /* stringx.lua */,
+				C3EAFA1817CA8EE000A508F8 /* tablex.lua */,
+				C3EAFA1917CA8EE000A508F8 /* template.lua */,
+				C3EAFA1A17CA8EE000A508F8 /* test.lua */,
+				C3EAFA1B17CA8EE000A508F8 /* text.lua */,
+				C3EAFA1C17CA8EE000A508F8 /* utils.lua */,
+				C3EAFA1D17CA8EE000A508F8 /* xml.lua */,
+			);
+			path = pl;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -147,6 +330,7 @@
 				C34B5BAE17C2707400C073A6 /* Sources */,
 				C34B5BAF17C2707400C073A6 /* Frameworks */,
 				C34B5BB017C2707400C073A6 /* CopyFiles */,
+				C3EAFA6917CA8FB300A508F8 /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -190,6 +374,8 @@
 			files = (
 				C34B5BB617C2707400C073A6 /* main.cpp in Sources */,
 				C3EAF9F317CA153100A508F8 /* DWApplication.cpp in Sources */,
+				C3EAF9F717CA761200A508F8 /* DWMediator.cpp in Sources */,
+				FD2470FAE9B6E2173C1DC7F0 /* DWController.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
