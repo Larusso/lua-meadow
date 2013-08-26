@@ -64,11 +64,6 @@ static int newMediator(lua_State *L)
     // Allocate memory for a pointer to to object
     DWMediator **s = (DWMediator **) lua_newuserdata(L, sizeof(DWMediator *));
 
-    //double x = luaL_checknumber (L, 2);
-    //double y = luaL_checknumber (L, 3);
-    //double dir = luaL_checknumber (L, 4);
-    //double speed = luaL_checknumber (L, 5);
-
     *s = new DWMediator();
 
     // Get metatable 'dire.Mediator' store in the registry
@@ -115,6 +110,23 @@ static int printMediator(lua_State *L)
         
         return 0;
     }
+    
+    static int getPosMediator(lua_State *L)
+    {
+        int n = lua_gettop(L);  // Number of arguments
+        if (n != 1)
+            return luaL_error(L, "Got %d arguments expected 1 (class)", n);
+        
+        luaL_checktype(L, 1, LUA_TTABLE);
+        lua_getfield(L,1,"__self");
+        DWMediator **mediator = static_cast<DWMediator **>(luaL_checkudata(L, -1, "dire.Mediator"));
+        Point p = (*mediator)->getPos();
+        
+        
+        lua_pushnumber(L, p.x);
+        lua_pushnumber(L, p.y);
+        return 2;
+    }
 
 static int destroyMediator(lua_State *L)
 {
@@ -133,6 +145,7 @@ static int registerMediatorTable(lua_State *L)
             {"new", newMediator},
             {"print", printMediator},
             {"move",moveMediator},
+            {"pos",getPosMediator},
             {"__gc", destroyMediator},
             {NULL, NULL}
     };

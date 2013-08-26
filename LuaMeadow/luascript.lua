@@ -19,6 +19,12 @@ mediator:print()
 local mediator3 = mediator:new()
 mediator3:print()
 mediator3:move(20,40)
+local x,y = mediator:pos();
+
+print('return from c++',x,y)
+local x2,y2 = mediator3:pos();
+print('return from c++',x2,y2)
+
 -- pretty.dump(mediator2)
 
 -- mediator:doit()
