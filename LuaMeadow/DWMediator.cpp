@@ -36,3 +36,8 @@ void DWMediator::move(int x, int y)
     this->y = y;
     printf("++ ------- move called x:%d, y:%d\n", x,y);
 }
+
+void DWMediator::doSomething()
+{
+    
+}

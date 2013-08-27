@@ -12,7 +12,13 @@
 
 #include <iostream>
 #include "DWMediator.h"
+#ifdef SWIG
+%{
+#include "DWController.h"
+%}
 
+%rename(Controller) DWController;
+#endif
 class DWController
 {
 public:

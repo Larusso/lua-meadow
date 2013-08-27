@@ -11,15 +11,25 @@
 
 #include <iostream>
 
+#ifdef SWIG
+%{
+#include "DWMediator.h"
+%}
+
+%rename(Mediator) DWMediator;
+%ignore doSomething();
+#endif
+
 class DWMediator
 {
-    int x, y;
+    int x,y;
 public:
     DWMediator();
     ~DWMediator();
     void release();
     void printType();
     void move(int x, int y);
+    void doSomething();
 };
 
 #endif /* defined(__LuaMeadow__DWMediator__) */
