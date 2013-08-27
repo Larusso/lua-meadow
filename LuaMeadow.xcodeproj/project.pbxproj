@@ -51,6 +51,7 @@
 		C3EAFA8E17CA8FC200A508F8 /* xml.lua in CopyFiles */ = {isa = PBXBuildFile; fileRef = C3EAFA1D17CA8EE000A508F8 /* xml.lua */; };
 		C3EED83B17CCF7BF00CB79DD /* liblua.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C3EED83A17CCF7BF00CB79DD /* liblua.a */; };
 		C3EED83E17CCFAEE00CB79DD /* dire.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C3EED83D17CCFAEE00CB79DD /* dire.cpp */; };
+		C3EED84017CD462600CB79DD /* external.lua in CopyFiles */ = {isa = PBXBuildFile; fileRef = C3EED83F17CD461700CB79DD /* external.lua */; };
 		FD2470FAE9B6E2173C1DC7F0 /* DWController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FD247ACE4E2218207B9160F8 /* DWController.cpp */; };
 /* End PBXBuildFile section */
 
@@ -71,6 +72,7 @@
 			dstPath = .;
 			dstSubfolderSpec = 16;
 			files = (
+				C3EED84017CD462600CB79DD /* external.lua in CopyFiles */,
 				C34B5CE417C27D8200C073A6 /* luascript.lua in CopyFiles */,
 				C34B5BB817C2707400C073A6 /* LuaMeadow.1 in CopyFiles */,
 			);
@@ -197,6 +199,7 @@
 		C3EAFA1D17CA8EE000A508F8 /* xml.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = xml.lua; sourceTree = "<group>"; };
 		C3EED83A17CCF7BF00CB79DD /* liblua.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = liblua.a; path = libs/liblua.a; sourceTree = "<group>"; };
 		C3EED83D17CCFAEE00CB79DD /* dire.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = dire.cpp; sourceTree = "<group>"; };
+		C3EED83F17CD461700CB79DD /* external.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = external.lua; sourceTree = "<group>"; };
 		C3FDE51417CCCEE300FD5A7D /* dire.i */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c.preprocessed; path = dire.i; sourceTree = "<group>"; };
 		FD2476D337B81B118CDB7EBD /* DWController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DWController.h; sourceTree = "<group>"; };
 		FD247ACE4E2218207B9160F8 /* DWController.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DWController.cpp; sourceTree = "<group>"; };
@@ -243,6 +246,7 @@
 				C3EAF9F117CA153100A508F8 /* DWApplication.cpp */,
 				C3EAF9F217CA153100A508F8 /* DWApplication.h */,
 				C3FDE51417CCCEE300FD5A7D /* dire.i */,
+				C3EED83F17CD461700CB79DD /* external.lua */,
 			);
 			path = LuaMeadow;
 			sourceTree = "<group>";

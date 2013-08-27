@@ -16,3 +16,6 @@ mediator:move(20,30)
 
 controller = direwolf.Controller()
 controller:registerView(mediator)
+
+local external = dofile('external.lua')
+external:execute()

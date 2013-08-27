@@ -17,7 +17,7 @@ DWMediator::DWMediator()
 
 DWMediator::~DWMediator()
 {
-    std::cout << "++ ------- destroy DWMediator" << std::endl;
+    std::cout << "++ ------- destroy ~DWMediator" << std::endl;
 }
 
 void DWMediator::release()
