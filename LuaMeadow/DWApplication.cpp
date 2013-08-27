@@ -72,16 +72,6 @@ void DWApplication::runScript()
     //assert(lua_gettop(L) == 0); //empty the lua stack
 }
 
-void DWApplication::registerMediatorType()
-{
-    std::cout << "set the mediator class in lua" << std::endl;
-}
-
-void DWApplication::registerListType()
-{
-    std::cout << "Set the list object in lua" << std::endl;
-}
-
 void DWApplication::run()
 {
     runScript();
