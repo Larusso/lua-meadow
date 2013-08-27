@@ -1,11 +1,35 @@
-print("Hello from Lua")
-print("Lua code is capable of reading the value set from C++", cppvar)
-luavar = cppvar * 3
+local dire = require 'direwolf'
+local pretty = require 'pl.pretty'
+-- pretty.dump(pretty)
+pretty.dump(dire)
 
-function myluafunction(times)
-  return string.rep("(-)", times) 
+local mediator = dire.Mediator:new()
+local mediator2 = dire.Mediator:new()
+
+
+mediator.doit = function(self)
+    print("I did it")
 end
 
-function myfunction(arg)
-  return cppfunction(arg)
-end
+
+pretty.dump(mediator)
+pretty.dump(getmetatable(mediator))
+mediator:print()
+
+local mediator3 = mediator:new()
+mediator3:print()
+mediator3:move(20,40)
+local x,y = mediator:pos();
+
+print('return from c++',x,y)
+local x2,y2 = mediator3:pos();
+print('return from c++',x2,y2)
+
+-- pretty.dump(mediator2)
+
+-- mediator:doit()
+-- error mediator2:doit()
+
+mediator = nil
+collectgarbage();
+print(getmetatable(self))
