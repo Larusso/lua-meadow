@@ -11,12 +11,6 @@
 
 #include <iostream>
 
-struct Point
-{
-    int x;
-    int y;
-};
-
 class DWMediator
 {
     int x, y;
@@ -26,7 +20,6 @@ public:
     void release();
     void printType();
     void move(int x, int y);
-    Point getPos();
 };
 
 #endif /* defined(__LuaMeadow__DWMediator__) */

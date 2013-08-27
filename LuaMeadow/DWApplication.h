@@ -12,7 +12,6 @@
 
 #ifndef __LuaMeadow__DWApplication__
 #define __LuaMeadow__DWApplication__
-
 #include <iostream>
 
 class DWApplication
