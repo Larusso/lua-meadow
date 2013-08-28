@@ -17,7 +17,7 @@ DWMediator::DWMediator()
 
 DWMediator::~DWMediator()
 {
-    std::cout << "++ ------- destroy DWMediator" << std::endl;
+    std::cout << "++ ------- destroy ~DWMediator" << std::endl;
 }
 
 void DWMediator::release()
@@ -37,7 +37,7 @@ void DWMediator::move(int x, int y)
     printf("++ ------- move called x:%d, y:%d\n", x,y);
 }
 
-Point DWMediator::getPos()
+void DWMediator::doSomething()
 {
-    return Point{this->x,this->y};
+    
 }

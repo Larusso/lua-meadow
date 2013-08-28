@@ -12,7 +12,6 @@
 
 #ifndef __LuaMeadow__DWApplication__
 #define __LuaMeadow__DWApplication__
-
 #include <iostream>
 
 class DWApplication
@@ -26,8 +25,6 @@ public:
 private:
     lua_State *L;
     std::list<int> theList;
-    void registerListType();
-    void registerMediatorType();
     void runScript();
 };
 
