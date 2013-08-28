@@ -1,11 +1,23 @@
-print("Hello from Lua")
-print("Lua code is capable of reading the value set from C++", cppvar)
-luavar = cppvar * 3
 
-function myluafunction(times)
-  return string.rep("(-)", times) 
-end
+local pretty = require 'pl.pretty'
 
-function myfunction(arg)
-  return cppfunction(arg)
-end
+pretty.dump(direwolf)
+m = getmetatable(direwolf)
+
+pretty.dump(m)
+
+local mediator = direwolf.Mediator()
+print(mediator)
+
+m = getmetatable(mediator)
+pretty.dump(m)
+
+mediator:move(20,30)
+
+controller = direwolf.Controller()
+controller:registerView(mediator)
+
+local external = dofile('external.lua')
+external:execute()
+
+mediator4 = Mediator()
