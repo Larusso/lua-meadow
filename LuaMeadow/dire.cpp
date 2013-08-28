@@ -2221,7 +2221,19 @@ SWIGEXPORT int SWIG_init(lua_State* L) /* default Lua action */
 
 
 const char* SWIG_LUACODE=
-  "";
+  "\n"
+  "    print('copy direwolf in global namespace')\n"
+  "    \n"
+  "    -- could copy all functions from direwolf to global\n"
+  "    -- for k,v in pairs(direwolf) do _G[k]=v end\n"
+  "    \n"
+  "    -- or set metatable for _G\n"
+  "    \n"
+  "    mt = {}\n"
+  "    mt.__index = direwolf\n"
+  "    \n"
+  "    print(getmetatable(_G))\n"
+  "    setmetatable(_G,mt)";
 
 void SWIG_init_user(lua_State* L)
 {

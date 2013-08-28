@@ -19,3 +19,5 @@ controller:registerView(mediator)
 
 local external = dofile('external.lua')
 external:execute()
+
+mediator4 = Mediator()
