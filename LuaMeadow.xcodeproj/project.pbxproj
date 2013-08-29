@@ -7,9 +7,60 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C3111DC817CE72F800B7B2EE /* DWMediator.mm in Sources */ = {isa = PBXBuildFile; fileRef = C3B0995217CE149A00204B3C /* DWMediator.mm */; };
+		C3111DC917CE72F800B7B2EE /* DWAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C3B0994317CE128500204B3C /* DWAppDelegate.m */; };
+		C3111DCB17CE73A000B7B2EE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3111DCA17CE73A000B7B2EE /* UIKit.framework */; };
+		C3111DCD17CE73A800B7B2EE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3111DCC17CE73A800B7B2EE /* Foundation.framework */; };
+		C3111DCF17CE73B300B7B2EE /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3111DCE17CE73B300B7B2EE /* CoreGraphics.framework */; };
+		C3111DD117CE73C300B7B2EE /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C3111DD017CE73C300B7B2EE /* libPods.a */; };
+		C3111DD817CE77EF00B7B2EE /* app.lua in CopyFiles */ = {isa = PBXBuildFile; fileRef = C3EAF9F917CA8EE000A508F8 /* app.lua */; };
+		C3111DD917CE77EF00B7B2EE /* array2d.lua in CopyFiles */ = {isa = PBXBuildFile; fileRef = C3EAF9FA17CA8EE000A508F8 /* array2d.lua */; };
+		C3111DDA17CE77EF00B7B2EE /* class.lua in CopyFiles */ = {isa = PBXBuildFile; fileRef = C3EAF9FB17CA8EE000A508F8 /* class.lua */; };
+		C3111DDB17CE77EF00B7B2EE /* compat.lua in CopyFiles */ = {isa = PBXBuildFile; fileRef = C3EAF9FC17CA8EE000A508F8 /* compat.lua */; };
+		C3111DDC17CE77EF00B7B2EE /* comprehension.lua in CopyFiles */ = {isa = PBXBuildFile; fileRef = C3EAF9FD17CA8EE000A508F8 /* comprehension.lua */; };
+		C3111DDD17CE77EF00B7B2EE /* config.lua in CopyFiles */ = {isa = PBXBuildFile; fileRef = C3EAF9FE17CA8EE000A508F8 /* config.lua */; };
+		C3111DDE17CE77EF00B7B2EE /* data.lua in CopyFiles */ = {isa = PBXBuildFile; fileRef = C3EAF9FF17CA8EE000A508F8 /* data.lua */; };
+		C3111DDF17CE77EF00B7B2EE /* Date.lua in CopyFiles */ = {isa = PBXBuildFile; fileRef = C3EAFA0017CA8EE000A508F8 /* Date.lua */; };
+		C3111DE017CE77EF00B7B2EE /* dir.lua in CopyFiles */ = {isa = PBXBuildFile; fileRef = C3EAFA0117CA8EE000A508F8 /* dir.lua */; };
+		C3111DE117CE77EF00B7B2EE /* file.lua in CopyFiles */ = {isa = PBXBuildFile; fileRef = C3EAFA0217CA8EE000A508F8 /* file.lua */; };
+		C3111DE217CE77EF00B7B2EE /* func.lua in CopyFiles */ = {isa = PBXBuildFile; fileRef = C3EAFA0317CA8EE000A508F8 /* func.lua */; };
+		C3111DE317CE77EF00B7B2EE /* import_into.lua in CopyFiles */ = {isa = PBXBuildFile; fileRef = C3EAFA0417CA8EE000A508F8 /* import_into.lua */; };
+		C3111DE417CE77EF00B7B2EE /* init.lua in CopyFiles */ = {isa = PBXBuildFile; fileRef = C3EAFA0517CA8EE000A508F8 /* init.lua */; };
+		C3111DE517CE77EF00B7B2EE /* input.lua in CopyFiles */ = {isa = PBXBuildFile; fileRef = C3EAFA0617CA8EE000A508F8 /* input.lua */; };
+		C3111DE617CE77EF00B7B2EE /* lapp.lua in CopyFiles */ = {isa = PBXBuildFile; fileRef = C3EAFA0717CA8EE000A508F8 /* lapp.lua */; };
+		C3111DE717CE77EF00B7B2EE /* lexer.lua in CopyFiles */ = {isa = PBXBuildFile; fileRef = C3EAFA0817CA8EE000A508F8 /* lexer.lua */; };
+		C3111DE817CE77EF00B7B2EE /* List.lua in CopyFiles */ = {isa = PBXBuildFile; fileRef = C3EAFA0917CA8EE000A508F8 /* List.lua */; };
+		C3111DE917CE77EF00B7B2EE /* luabalanced.lua in CopyFiles */ = {isa = PBXBuildFile; fileRef = C3EAFA0A17CA8EE000A508F8 /* luabalanced.lua */; };
+		C3111DEA17CE77EF00B7B2EE /* Map.lua in CopyFiles */ = {isa = PBXBuildFile; fileRef = C3EAFA0B17CA8EE000A508F8 /* Map.lua */; };
+		C3111DEB17CE77EF00B7B2EE /* MultiMap.lua in CopyFiles */ = {isa = PBXBuildFile; fileRef = C3EAFA0C17CA8EE000A508F8 /* MultiMap.lua */; };
+		C3111DEC17CE77EF00B7B2EE /* operator.lua in CopyFiles */ = {isa = PBXBuildFile; fileRef = C3EAFA0D17CA8EE000A508F8 /* operator.lua */; };
+		C3111DED17CE77EF00B7B2EE /* OrderedMap.lua in CopyFiles */ = {isa = PBXBuildFile; fileRef = C3EAFA0E17CA8EE000A508F8 /* OrderedMap.lua */; };
+		C3111DEE17CE77EF00B7B2EE /* path.lua in CopyFiles */ = {isa = PBXBuildFile; fileRef = C3EAFA0F17CA8EE000A508F8 /* path.lua */; };
+		C3111DEF17CE77EF00B7B2EE /* permute.lua in CopyFiles */ = {isa = PBXBuildFile; fileRef = C3EAFA1017CA8EE000A508F8 /* permute.lua */; };
+		C3111DF017CE77EF00B7B2EE /* pretty.lua in CopyFiles */ = {isa = PBXBuildFile; fileRef = C3EAFA1117CA8EE000A508F8 /* pretty.lua */; };
+		C3111DF117CE77EF00B7B2EE /* seq.lua in CopyFiles */ = {isa = PBXBuildFile; fileRef = C3EAFA1217CA8EE000A508F8 /* seq.lua */; };
+		C3111DF217CE77EF00B7B2EE /* Set.lua in CopyFiles */ = {isa = PBXBuildFile; fileRef = C3EAFA1317CA8EE000A508F8 /* Set.lua */; };
+		C3111DF317CE77EF00B7B2EE /* sip.lua in CopyFiles */ = {isa = PBXBuildFile; fileRef = C3EAFA1417CA8EE000A508F8 /* sip.lua */; };
+		C3111DF417CE77EF00B7B2EE /* strict.lua in CopyFiles */ = {isa = PBXBuildFile; fileRef = C3EAFA1517CA8EE000A508F8 /* strict.lua */; };
+		C3111DF517CE77EF00B7B2EE /* stringio.lua in CopyFiles */ = {isa = PBXBuildFile; fileRef = C3EAFA1617CA8EE000A508F8 /* stringio.lua */; };
+		C3111DF617CE77EF00B7B2EE /* stringx.lua in CopyFiles */ = {isa = PBXBuildFile; fileRef = C3EAFA1717CA8EE000A508F8 /* stringx.lua */; };
+		C3111DF717CE77EF00B7B2EE /* tablex.lua in CopyFiles */ = {isa = PBXBuildFile; fileRef = C3EAFA1817CA8EE000A508F8 /* tablex.lua */; };
+		C3111DF817CE77EF00B7B2EE /* template.lua in CopyFiles */ = {isa = PBXBuildFile; fileRef = C3EAFA1917CA8EE000A508F8 /* template.lua */; };
+		C3111DF917CE77EF00B7B2EE /* test.lua in CopyFiles */ = {isa = PBXBuildFile; fileRef = C3EAFA1A17CA8EE000A508F8 /* test.lua */; };
+		C3111DFA17CE77EF00B7B2EE /* text.lua in CopyFiles */ = {isa = PBXBuildFile; fileRef = C3EAFA1B17CA8EE000A508F8 /* text.lua */; };
+		C3111DFB17CE77EF00B7B2EE /* utils.lua in CopyFiles */ = {isa = PBXBuildFile; fileRef = C3EAFA1C17CA8EE000A508F8 /* utils.lua */; };
+		C3111DFC17CE77EF00B7B2EE /* xml.lua in CopyFiles */ = {isa = PBXBuildFile; fileRef = C3EAFA1D17CA8EE000A508F8 /* xml.lua */; };
+		C3111DFE17CF2CB000B7B2EE /* luascript.lua in CopyFiles */ = {isa = PBXBuildFile; fileRef = C34B5CE317C27D5A00C073A6 /* luascript.lua */; };
+		C3111DFF17CF2CB000B7B2EE /* external.lua in CopyFiles */ = {isa = PBXBuildFile; fileRef = C3EED83F17CD461700CB79DD /* external.lua */; };
 		C34B5BB617C2707400C073A6 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C34B5BB517C2707400C073A6 /* main.cpp */; };
 		C34B5BB817C2707400C073A6 /* LuaMeadow.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = C34B5BB717C2707400C073A6 /* LuaMeadow.1 */; };
 		C34B5CE417C27D8200C073A6 /* luascript.lua in CopyFiles */ = {isa = PBXBuildFile; fileRef = C34B5CE317C27D5A00C073A6 /* luascript.lua */; };
+		C37E3C3F17CE5E2900DCCA9B /* dire-objc.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C3B0995B17CE1F7E00204B3C /* dire-objc.cpp */; };
+		C3B0993E17CE128500204B3C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C3B0993C17CE128500204B3C /* InfoPlist.strings */; };
+		C3B0994017CE128500204B3C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C3B0993F17CE128500204B3C /* main.m */; };
+		C3B0994617CE128500204B3C /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = C3B0994517CE128500204B3C /* Default.png */; };
+		C3B0994817CE128500204B3C /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C3B0994717CE128500204B3C /* Default@2x.png */; };
+		C3B0994A17CE128500204B3C /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C3B0994917CE128500204B3C /* Default-568h@2x.png */; };
 		C3EAF9F317CA153100A508F8 /* DWApplication.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C3EAF9F117CA153100A508F8 /* DWApplication.cpp */; };
 		C3EAF9F717CA761200A508F8 /* DWMediator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C3EAF9F517CA761200A508F8 /* DWMediator.cpp */; };
 		C3EAFA6A17CA8FC200A508F8 /* app.lua in CopyFiles */ = {isa = PBXBuildFile; fileRef = C3EAF9F917CA8EE000A508F8 /* app.lua */; };
@@ -56,6 +107,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		C37E3C3D17CE5D5000DCCA9B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C34B5BAA17C2707400C073A6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C3B0995517CE1EAB00204B3C;
+			remoteInfo = "SWIG OBJ-C Generator";
+		};
 		C3FDE51F17CCD7B800FD5A7D /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = C34B5BAA17C2707400C073A6 /* Project object */;
@@ -66,6 +124,63 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		C3111DD717CE77E200B7B2EE /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = lua/pl;
+			dstSubfolderSpec = 7;
+			files = (
+				C3111DD817CE77EF00B7B2EE /* app.lua in CopyFiles */,
+				C3111DD917CE77EF00B7B2EE /* array2d.lua in CopyFiles */,
+				C3111DDA17CE77EF00B7B2EE /* class.lua in CopyFiles */,
+				C3111DDB17CE77EF00B7B2EE /* compat.lua in CopyFiles */,
+				C3111DDC17CE77EF00B7B2EE /* comprehension.lua in CopyFiles */,
+				C3111DDD17CE77EF00B7B2EE /* config.lua in CopyFiles */,
+				C3111DDE17CE77EF00B7B2EE /* data.lua in CopyFiles */,
+				C3111DDF17CE77EF00B7B2EE /* Date.lua in CopyFiles */,
+				C3111DE017CE77EF00B7B2EE /* dir.lua in CopyFiles */,
+				C3111DE117CE77EF00B7B2EE /* file.lua in CopyFiles */,
+				C3111DE217CE77EF00B7B2EE /* func.lua in CopyFiles */,
+				C3111DE317CE77EF00B7B2EE /* import_into.lua in CopyFiles */,
+				C3111DE417CE77EF00B7B2EE /* init.lua in CopyFiles */,
+				C3111DE517CE77EF00B7B2EE /* input.lua in CopyFiles */,
+				C3111DE617CE77EF00B7B2EE /* lapp.lua in CopyFiles */,
+				C3111DE717CE77EF00B7B2EE /* lexer.lua in CopyFiles */,
+				C3111DE817CE77EF00B7B2EE /* List.lua in CopyFiles */,
+				C3111DE917CE77EF00B7B2EE /* luabalanced.lua in CopyFiles */,
+				C3111DEA17CE77EF00B7B2EE /* Map.lua in CopyFiles */,
+				C3111DEB17CE77EF00B7B2EE /* MultiMap.lua in CopyFiles */,
+				C3111DEC17CE77EF00B7B2EE /* operator.lua in CopyFiles */,
+				C3111DED17CE77EF00B7B2EE /* OrderedMap.lua in CopyFiles */,
+				C3111DEE17CE77EF00B7B2EE /* path.lua in CopyFiles */,
+				C3111DEF17CE77EF00B7B2EE /* permute.lua in CopyFiles */,
+				C3111DF017CE77EF00B7B2EE /* pretty.lua in CopyFiles */,
+				C3111DF117CE77EF00B7B2EE /* seq.lua in CopyFiles */,
+				C3111DF217CE77EF00B7B2EE /* Set.lua in CopyFiles */,
+				C3111DF317CE77EF00B7B2EE /* sip.lua in CopyFiles */,
+				C3111DF417CE77EF00B7B2EE /* strict.lua in CopyFiles */,
+				C3111DF517CE77EF00B7B2EE /* stringio.lua in CopyFiles */,
+				C3111DF617CE77EF00B7B2EE /* stringx.lua in CopyFiles */,
+				C3111DF717CE77EF00B7B2EE /* tablex.lua in CopyFiles */,
+				C3111DF817CE77EF00B7B2EE /* template.lua in CopyFiles */,
+				C3111DF917CE77EF00B7B2EE /* test.lua in CopyFiles */,
+				C3111DFA17CE77EF00B7B2EE /* text.lua in CopyFiles */,
+				C3111DFB17CE77EF00B7B2EE /* utils.lua in CopyFiles */,
+				C3111DFC17CE77EF00B7B2EE /* xml.lua in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C3111DFD17CF2CA300B7B2EE /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = lua;
+			dstSubfolderSpec = 7;
+			files = (
+				C3111DFE17CF2CB000B7B2EE /* luascript.lua in CopyFiles */,
+				C3111DFF17CF2CB000B7B2EE /* external.lua in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C34B5BB017C2707400C073A6 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 12;
@@ -127,37 +242,36 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		136D7212E5EB4FB4A6A2E912 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
+		C3111DC617CE6FA800B7B2EE /* libPods.a */ = {isa = PBXFileReference; lastKnownFileType = file; name = libPods.a; path = "Pods/build/Release-iphoneos/libPods.a"; sourceTree = "<group>"; };
+		C3111DCA17CE73A000B7B2EE /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.1.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		C3111DCC17CE73A800B7B2EE /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.1.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		C3111DCE17CE73B300B7B2EE /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.1.sdk/System/Library/Frameworks/CoreGraphics.framework; sourceTree = DEVELOPER_DIR; };
+		C3111DD017CE73C300B7B2EE /* libPods.a */ = {isa = PBXFileReference; lastKnownFileType = file; name = libPods.a; path = "Pods/build/Release-iphoneos/libPods.a"; sourceTree = "<group>"; };
 		C34B5BB217C2707400C073A6 /* LuaMeadow */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = LuaMeadow; sourceTree = BUILT_PRODUCTS_DIR; };
-		C34B5BB517C2707400C073A6 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
-		C34B5BB717C2707400C073A6 /* LuaMeadow.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = LuaMeadow.1; sourceTree = "<group>"; };
-		C34B5CC717C27B2600C073A6 /* lapi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = lapi.h; path = "libs/lua-5.2.2/src/lapi.h"; sourceTree = "<group>"; };
-		C34B5CC817C27B2600C073A6 /* lauxlib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = lauxlib.h; path = "libs/lua-5.2.2/src/lauxlib.h"; sourceTree = "<group>"; };
-		C34B5CC917C27B2600C073A6 /* lcode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = lcode.h; path = "libs/lua-5.2.2/src/lcode.h"; sourceTree = "<group>"; };
-		C34B5CCA17C27B2600C073A6 /* lctype.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = lctype.h; path = "libs/lua-5.2.2/src/lctype.h"; sourceTree = "<group>"; };
-		C34B5CCB17C27B2600C073A6 /* ldebug.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ldebug.h; path = "libs/lua-5.2.2/src/ldebug.h"; sourceTree = "<group>"; };
-		C34B5CCC17C27B2600C073A6 /* ldo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ldo.h; path = "libs/lua-5.2.2/src/ldo.h"; sourceTree = "<group>"; };
-		C34B5CCD17C27B2600C073A6 /* lfunc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = lfunc.h; path = "libs/lua-5.2.2/src/lfunc.h"; sourceTree = "<group>"; };
-		C34B5CCE17C27B2600C073A6 /* lgc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = lgc.h; path = "libs/lua-5.2.2/src/lgc.h"; sourceTree = "<group>"; };
-		C34B5CCF17C27B2600C073A6 /* llex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = llex.h; path = "libs/lua-5.2.2/src/llex.h"; sourceTree = "<group>"; };
-		C34B5CD017C27B2600C073A6 /* llimits.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = llimits.h; path = "libs/lua-5.2.2/src/llimits.h"; sourceTree = "<group>"; };
-		C34B5CD117C27B2600C073A6 /* lmem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = lmem.h; path = "libs/lua-5.2.2/src/lmem.h"; sourceTree = "<group>"; };
-		C34B5CD217C27B2600C073A6 /* lobject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = lobject.h; path = "libs/lua-5.2.2/src/lobject.h"; sourceTree = "<group>"; };
-		C34B5CD317C27B2600C073A6 /* lopcodes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = lopcodes.h; path = "libs/lua-5.2.2/src/lopcodes.h"; sourceTree = "<group>"; };
-		C34B5CD417C27B2600C073A6 /* lparser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = lparser.h; path = "libs/lua-5.2.2/src/lparser.h"; sourceTree = "<group>"; };
-		C34B5CD517C27B2600C073A6 /* lstate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = lstate.h; path = "libs/lua-5.2.2/src/lstate.h"; sourceTree = "<group>"; };
-		C34B5CD617C27B2600C073A6 /* lstring.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = lstring.h; path = "libs/lua-5.2.2/src/lstring.h"; sourceTree = "<group>"; };
-		C34B5CD717C27B2600C073A6 /* ltable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ltable.h; path = "libs/lua-5.2.2/src/ltable.h"; sourceTree = "<group>"; };
-		C34B5CD817C27B2600C073A6 /* ltm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ltm.h; path = "libs/lua-5.2.2/src/ltm.h"; sourceTree = "<group>"; };
-		C34B5CD917C27B2600C073A6 /* lua.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = lua.h; path = "libs/lua-5.2.2/src/lua.h"; sourceTree = "<group>"; };
-		C34B5CDA17C27B2600C073A6 /* luaconf.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = luaconf.h; path = "libs/lua-5.2.2/src/luaconf.h"; sourceTree = "<group>"; };
-		C34B5CDB17C27B2600C073A6 /* lualib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = lualib.h; path = "libs/lua-5.2.2/src/lualib.h"; sourceTree = "<group>"; };
-		C34B5CDC17C27B2600C073A6 /* lundump.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = lundump.h; path = "libs/lua-5.2.2/src/lundump.h"; sourceTree = "<group>"; };
-		C34B5CDD17C27B2600C073A6 /* lvm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = lvm.h; path = "libs/lua-5.2.2/src/lvm.h"; sourceTree = "<group>"; };
-		C34B5CDE17C27B2600C073A6 /* lzio.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = lzio.h; path = "libs/lua-5.2.2/src/lzio.h"; sourceTree = "<group>"; };
-		C34B5CDF17C27B2600C073A6 /* lua.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = lua.hpp; path = "libs/lua-5.2.2/src/lua.hpp"; sourceTree = "<group>"; };
+		C34B5BB517C2707400C073A6 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = main.cpp; path = LuaMeadow/main.cpp; sourceTree = "<group>"; };
+		C34B5BB717C2707400C073A6 /* LuaMeadow.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; name = LuaMeadow.1; path = LuaMeadow/LuaMeadow.1; sourceTree = "<group>"; };
 		C34B5CE317C27D5A00C073A6 /* luascript.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = luascript.lua; sourceTree = "<group>"; };
-		C3EAF9F117CA153100A508F8 /* DWApplication.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DWApplication.cpp; sourceTree = "<group>"; };
-		C3EAF9F217CA153100A508F8 /* DWApplication.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DWApplication.h; sourceTree = "<group>"; };
+		C3B0993117CE128400204B3C /* LuaMeadowiOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LuaMeadowiOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C3B0993317CE128500204B3C /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		C3B0993517CE128500204B3C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		C3B0993717CE128500204B3C /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = Library/Frameworks/CoreGraphics.framework; sourceTree = DEVELOPER_DIR; };
+		C3B0993B17CE128500204B3C /* LuaMeadowiOS-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "LuaMeadowiOS-Info.plist"; sourceTree = "<group>"; };
+		C3B0993D17CE128500204B3C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		C3B0993F17CE128500204B3C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		C3B0994117CE128500204B3C /* LuaMeadowiOS-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "LuaMeadowiOS-Prefix.pch"; sourceTree = "<group>"; };
+		C3B0994217CE128500204B3C /* DWAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DWAppDelegate.h; sourceTree = "<group>"; };
+		C3B0994317CE128500204B3C /* DWAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DWAppDelegate.m; sourceTree = "<group>"; };
+		C3B0994517CE128500204B3C /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		C3B0994717CE128500204B3C /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		C3B0994917CE128500204B3C /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		C3B0995117CE149A00204B3C /* DWMediator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DWMediator.h; sourceTree = "<group>"; };
+		C3B0995217CE149A00204B3C /* DWMediator.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = DWMediator.mm; sourceTree = "<group>"; };
+		C3B0995417CE184500204B3C /* DWMediator_CPP.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DWMediator_CPP.h; sourceTree = "<group>"; };
+		C3B0995917CE1EDD00204B3C /* dire-objc.i */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c.preprocessed; path = "dire-objc.i"; sourceTree = "<group>"; };
+		C3B0995B17CE1F7E00204B3C /* dire-objc.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = "dire-objc.cpp"; sourceTree = "<group>"; };
+		C3EAF9F117CA153100A508F8 /* DWApplication.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = DWApplication.cpp; path = LuaMeadow/DWApplication.cpp; sourceTree = "<group>"; };
+		C3EAF9F217CA153100A508F8 /* DWApplication.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DWApplication.h; path = LuaMeadow/DWApplication.h; sourceTree = "<group>"; };
 		C3EAF9F517CA761200A508F8 /* DWMediator.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DWMediator.cpp; sourceTree = "<group>"; };
 		C3EAF9F617CA761200A508F8 /* DWMediator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DWMediator.h; sourceTree = "<group>"; };
 		C3EAF9F917CA8EE000A508F8 /* app.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = app.lua; sourceTree = "<group>"; };
@@ -200,7 +314,7 @@
 		C3EED83A17CCF7BF00CB79DD /* liblua.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = liblua.a; path = libs/liblua.a; sourceTree = "<group>"; };
 		C3EED83D17CCFAEE00CB79DD /* dire.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = dire.cpp; sourceTree = "<group>"; };
 		C3EED83F17CD461700CB79DD /* external.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = external.lua; sourceTree = "<group>"; };
-		C3FDE51417CCCEE300FD5A7D /* dire.i */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c.preprocessed; path = dire.i; sourceTree = "<group>"; };
+		C3FDE51417CCCEE300FD5A7D /* dire.i */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c.preprocessed; name = dire.i; path = LuaMeadow/dire.i; sourceTree = "<group>"; };
 		FD2476D337B81B118CDB7EBD /* DWController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DWController.h; sourceTree = "<group>"; };
 		FD247ACE4E2218207B9160F8 /* DWController.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DWController.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -214,16 +328,34 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		C3B0992E17CE128400204B3C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C3111DCF17CE73B300B7B2EE /* CoreGraphics.framework in Frameworks */,
+				C3111DCD17CE73A800B7B2EE /* Foundation.framework in Frameworks */,
+				C3111DCB17CE73A000B7B2EE /* UIKit.framework in Frameworks */,
+				C3111DD117CE73C300B7B2EE /* libPods.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
 		C34B5BA917C2707400C073A6 = {
 			isa = PBXGroup;
 			children = (
+				C3111DD017CE73C300B7B2EE /* libPods.a */,
+				C3111DCE17CE73B300B7B2EE /* CoreGraphics.framework */,
+				C3111DCC17CE73A800B7B2EE /* Foundation.framework */,
+				C3111DCA17CE73A000B7B2EE /* UIKit.framework */,
+				C3B0992C17CE11D500204B3C /* LuaMedow c++ */,
 				C3EED83A17CCF7BF00CB79DD /* liblua.a */,
-				C34B5CE017C27B3100C073A6 /* lua */,
 				C34B5BB417C2707400C073A6 /* LuaMeadow */,
+				C3B0993917CE128500204B3C /* LuaMeadowiOS */,
+				C3B0993217CE128500204B3C /* Frameworks */,
 				C34B5BB317C2707400C073A6 /* Products */,
+				136D7212E5EB4FB4A6A2E912 /* Pods.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -231,6 +363,7 @@
 			isa = PBXGroup;
 			children = (
 				C34B5BB217C2707400C073A6 /* LuaMeadow */,
+				C3B0993117CE128400204B3C /* LuaMeadowiOS.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -239,48 +372,71 @@
 			isa = PBXGroup;
 			children = (
 				C3EAF9F817CA8EE000A508F8 /* pl */,
-				C3EAF9F417CA75EB00A508F8 /* export */,
 				C34B5CE317C27D5A00C073A6 /* luascript.lua */,
-				C34B5BB517C2707400C073A6 /* main.cpp */,
-				C34B5BB717C2707400C073A6 /* LuaMeadow.1 */,
-				C3EAF9F117CA153100A508F8 /* DWApplication.cpp */,
-				C3EAF9F217CA153100A508F8 /* DWApplication.h */,
-				C3FDE51417CCCEE300FD5A7D /* dire.i */,
 				C3EED83F17CD461700CB79DD /* external.lua */,
 			);
 			path = LuaMeadow;
 			sourceTree = "<group>";
 		};
-		C34B5CE017C27B3100C073A6 /* lua */ = {
+		C3B0992C17CE11D500204B3C /* LuaMedow c++ */ = {
 			isa = PBXGroup;
 			children = (
-				C34B5CC717C27B2600C073A6 /* lapi.h */,
-				C34B5CC817C27B2600C073A6 /* lauxlib.h */,
-				C34B5CC917C27B2600C073A6 /* lcode.h */,
-				C34B5CCA17C27B2600C073A6 /* lctype.h */,
-				C34B5CCB17C27B2600C073A6 /* ldebug.h */,
-				C34B5CCC17C27B2600C073A6 /* ldo.h */,
-				C34B5CCD17C27B2600C073A6 /* lfunc.h */,
-				C34B5CCE17C27B2600C073A6 /* lgc.h */,
-				C34B5CCF17C27B2600C073A6 /* llex.h */,
-				C34B5CD017C27B2600C073A6 /* llimits.h */,
-				C34B5CD117C27B2600C073A6 /* lmem.h */,
-				C34B5CD217C27B2600C073A6 /* lobject.h */,
-				C34B5CD317C27B2600C073A6 /* lopcodes.h */,
-				C34B5CD417C27B2600C073A6 /* lparser.h */,
-				C34B5CD517C27B2600C073A6 /* lstate.h */,
-				C34B5CD617C27B2600C073A6 /* lstring.h */,
-				C34B5CD717C27B2600C073A6 /* ltable.h */,
-				C34B5CD817C27B2600C073A6 /* ltm.h */,
-				C34B5CD917C27B2600C073A6 /* lua.h */,
-				C34B5CDA17C27B2600C073A6 /* luaconf.h */,
-				C34B5CDB17C27B2600C073A6 /* lualib.h */,
-				C34B5CDC17C27B2600C073A6 /* lundump.h */,
-				C34B5CDD17C27B2600C073A6 /* lvm.h */,
-				C34B5CDE17C27B2600C073A6 /* lzio.h */,
-				C34B5CDF17C27B2600C073A6 /* lua.hpp */,
+				C3FDE51417CCCEE300FD5A7D /* dire.i */,
+				C34B5BB517C2707400C073A6 /* main.cpp */,
+				C34B5BB717C2707400C073A6 /* LuaMeadow.1 */,
+				C3EAF9F117CA153100A508F8 /* DWApplication.cpp */,
+				C3EAF9F217CA153100A508F8 /* DWApplication.h */,
+				C3EAF9F417CA75EB00A508F8 /* export */,
 			);
-			name = lua;
+			name = "LuaMedow c++";
+			sourceTree = "<group>";
+		};
+		C3B0993217CE128500204B3C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C3111DC617CE6FA800B7B2EE /* libPods.a */,
+				C3B0993317CE128500204B3C /* UIKit.framework */,
+				C3B0993517CE128500204B3C /* Foundation.framework */,
+				C3B0993717CE128500204B3C /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C3B0993917CE128500204B3C /* LuaMeadowiOS */ = {
+			isa = PBXGroup;
+			children = (
+				C3B0995017CE146A00204B3C /* export */,
+				C3B0994217CE128500204B3C /* DWAppDelegate.h */,
+				C3B0994317CE128500204B3C /* DWAppDelegate.m */,
+				C3B0993A17CE128500204B3C /* Supporting Files */,
+				C3B0995917CE1EDD00204B3C /* dire-objc.i */,
+			);
+			path = LuaMeadowiOS;
+			sourceTree = "<group>";
+		};
+		C3B0993A17CE128500204B3C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				C3B0993B17CE128500204B3C /* LuaMeadowiOS-Info.plist */,
+				C3B0993C17CE128500204B3C /* InfoPlist.strings */,
+				C3B0993F17CE128500204B3C /* main.m */,
+				C3B0994117CE128500204B3C /* LuaMeadowiOS-Prefix.pch */,
+				C3B0994517CE128500204B3C /* Default.png */,
+				C3B0994717CE128500204B3C /* Default@2x.png */,
+				C3B0994917CE128500204B3C /* Default-568h@2x.png */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C3B0995017CE146A00204B3C /* export */ = {
+			isa = PBXGroup;
+			children = (
+				C3B0995B17CE1F7E00204B3C /* dire-objc.cpp */,
+				C3B0995117CE149A00204B3C /* DWMediator.h */,
+				C3B0995217CE149A00204B3C /* DWMediator.mm */,
+				C3B0995417CE184500204B3C /* DWMediator_CPP.h */,
+			);
+			name = export;
 			sourceTree = "<group>";
 		};
 		C3EAF9F417CA75EB00A508F8 /* export */ = {
@@ -293,6 +449,7 @@
 				FD2476D337B81B118CDB7EBD /* DWController.h */,
 			);
 			name = export;
+			path = LuaMeadow;
 			sourceTree = "<group>";
 		};
 		C3EAF9F817CA8EE000A508F8 /* pl */ = {
@@ -342,17 +499,31 @@
 /* End PBXGroup section */
 
 /* Begin PBXLegacyTarget section */
-		C3FDE51A17CCD4D900FD5A7D /* SWIG Generator */ = {
+		C3B0995517CE1EAB00204B3C /* SWIG OBJ-C Generator */ = {
+			isa = PBXLegacyTarget;
+			buildArgumentsString = "-c++ -lua -o dire-objc.cpp dire-objc.i";
+			buildConfigurationList = C3B0995617CE1EAB00204B3C /* Build configuration list for PBXLegacyTarget "SWIG OBJ-C Generator" */;
+			buildPhases = (
+			);
+			buildToolPath = swig;
+			buildWorkingDirectory = /Users/larusso/work/projects/larusso/LuaMeadow/LuaMeadowiOS;
+			dependencies = (
+			);
+			name = "SWIG OBJ-C Generator";
+			passBuildSettingsInEnvironment = 1;
+			productName = "SWIG Generator";
+		};
+		C3FDE51A17CCD4D900FD5A7D /* SWIG C++ Generator */ = {
 			isa = PBXLegacyTarget;
 			buildArgumentsString = "-c++ -lua -o dire.cpp dire.i";
-			buildConfigurationList = C3FDE51B17CCD4D900FD5A7D /* Build configuration list for PBXLegacyTarget "SWIG Generator" */;
+			buildConfigurationList = C3FDE51B17CCD4D900FD5A7D /* Build configuration list for PBXLegacyTarget "SWIG C++ Generator" */;
 			buildPhases = (
 			);
 			buildToolPath = swig;
 			buildWorkingDirectory = /Users/larusso/work/projects/larusso/LuaMeadow/LuaMeadow;
 			dependencies = (
 			);
-			name = "SWIG Generator";
+			name = "SWIG C++ Generator";
 			passBuildSettingsInEnvironment = 1;
 			productName = "SWIG Generator";
 		};
@@ -363,10 +534,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C34B5BBB17C2707400C073A6 /* Build configuration list for PBXNativeTarget "LuaMeadow" */;
 			buildPhases = (
+				7C2A5DCC976F44FB9C0AD793 /* Check Pods Manifest.lock */,
 				C34B5BAE17C2707400C073A6 /* Sources */,
 				C34B5BAF17C2707400C073A6 /* Frameworks */,
 				C34B5BB017C2707400C073A6 /* CopyFiles */,
 				C3EAFA6917CA8FB300A508F8 /* CopyFiles */,
+				A1ADB0D87A0546BA9AB3DD42 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -377,6 +550,27 @@
 			productName = LuaMeadow;
 			productReference = C34B5BB217C2707400C073A6 /* LuaMeadow */;
 			productType = "com.apple.product-type.tool";
+		};
+		C3B0993017CE128400204B3C /* LuaMeadowiOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C3B0994B17CE128500204B3C /* Build configuration list for PBXNativeTarget "LuaMeadowiOS" */;
+			buildPhases = (
+				C3B0992D17CE128400204B3C /* Sources */,
+				C3B0992E17CE128400204B3C /* Frameworks */,
+				C3B0992F17CE128400204B3C /* Resources */,
+				C3111DC317CE69AC00B7B2EE /* Copy Pods Resources */,
+				C3111DD717CE77E200B7B2EE /* CopyFiles */,
+				C3111DFD17CF2CA300B7B2EE /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C37E3C3E17CE5D5000DCCA9B /* PBXTargetDependency */,
+			);
+			name = LuaMeadowiOS;
+			productName = LuaMeadowiOS;
+			productReference = C3B0993117CE128400204B3C /* LuaMeadowiOS.app */;
+			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
@@ -400,10 +594,73 @@
 			projectRoot = "";
 			targets = (
 				C34B5BB117C2707400C073A6 /* LuaMeadow */,
-				C3FDE51A17CCD4D900FD5A7D /* SWIG Generator */,
+				C3FDE51A17CCD4D900FD5A7D /* SWIG C++ Generator */,
+				C3B0993017CE128400204B3C /* LuaMeadowiOS */,
+				C3B0995517CE1EAB00204B3C /* SWIG OBJ-C Generator */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C3B0992F17CE128400204B3C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C3B0993E17CE128500204B3C /* InfoPlist.strings in Resources */,
+				C3B0994617CE128500204B3C /* Default.png in Resources */,
+				C3B0994817CE128500204B3C /* Default@2x.png in Resources */,
+				C3B0994A17CE128500204B3C /* Default-568h@2x.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		7C2A5DCC976F44FB9C0AD793 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		A1ADB0D87A0546BA9AB3DD42 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C3111DC317CE69AC00B7B2EE /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		C34B5BAE17C2707400C073A6 /* Sources */ = {
@@ -418,15 +675,42 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		C3B0992D17CE128400204B3C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C3111DC817CE72F800B7B2EE /* DWMediator.mm in Sources */,
+				C3111DC917CE72F800B7B2EE /* DWAppDelegate.m in Sources */,
+				C37E3C3F17CE5E2900DCCA9B /* dire-objc.cpp in Sources */,
+				C3B0994017CE128500204B3C /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		C37E3C3E17CE5D5000DCCA9B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C3B0995517CE1EAB00204B3C /* SWIG OBJ-C Generator */;
+			targetProxy = C37E3C3D17CE5D5000DCCA9B /* PBXContainerItemProxy */;
+		};
 		C3FDE52017CCD7B800FD5A7D /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = C3FDE51A17CCD4D900FD5A7D /* SWIG Generator */;
+			target = C3FDE51A17CCD4D900FD5A7D /* SWIG C++ Generator */;
 			targetProxy = C3FDE51F17CCD7B800FD5A7D /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		C3B0993C17CE128500204B3C /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C3B0993D17CE128500204B3C /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		C34B5BB917C2707400C073A6 /* Debug */ = {
@@ -490,6 +774,7 @@
 		};
 		C34B5BBC17C2707400C073A6 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 136D7212E5EB4FB4A6A2E912 /* Pods.xcconfig */;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				GCC_VERSION = "";
@@ -508,6 +793,7 @@
 		};
 		C34B5BBD17C2707400C073A6 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 136D7212E5EB4FB4A6A2E912 /* Pods.xcconfig */;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				GCC_VERSION = "";
@@ -523,9 +809,102 @@
 			};
 			name = Release;
 		};
+		C3B0994C17CE128500204B3C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SYSTEM_APPS_DIR)/Xcode.app/Contents/Developer/Library/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "LuaMeadowiOS/LuaMeadowiOS-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"COCOAPODS=1",
+				);
+				HEADER_SEARCH_PATHS = (
+					"\"${PODS_ROOT}/Headers\"",
+					"\"${PODS_ROOT}/Headers/lua\"",
+				);
+				INFOPLIST_FILE = "LuaMeadowiOS/LuaMeadowiOS-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				MACOSX_DEPLOYMENT_TARGET = "";
+				OTHER_LDFLAGS = (
+					"-v",
+					"-lc++",
+				);
+				PODS_ROOT = "${SRCROOT}/Pods";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 1;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		C3B0994D17CE128500204B3C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SYSTEM_APPS_DIR)/Xcode.app/Contents/Developer/Library/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "LuaMeadowiOS/LuaMeadowiOS-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = "COCOAPODS=1";
+				HEADER_SEARCH_PATHS = (
+					"\"${PODS_ROOT}/Headers\"",
+					"\"${PODS_ROOT}/Headers/lua\"",
+				);
+				INFOPLIST_FILE = "LuaMeadowiOS/LuaMeadowiOS-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				MACOSX_DEPLOYMENT_TARGET = "";
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				OTHER_LDFLAGS = (
+					"-v",
+					"-lc++",
+				);
+				PODS_ROOT = "${SRCROOT}/Pods";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 1;
+				VALIDATE_PRODUCT = YES;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		C3B0995717CE1EAB00204B3C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				DEBUGGING_SYMBOLS = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = "SWIG C++ Generator copy";
+			};
+			name = Debug;
+		};
+		C3B0995817CE1EAB00204B3C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = "SWIG C++ Generator copy";
+			};
+			name = Release;
+		};
 		C3FDE51C17CCD4D900FD5A7D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
 				DEBUGGING_SYMBOLS = YES;
 				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -538,6 +917,7 @@
 		C3FDE51D17CCD4D900FD5A7D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
 				OTHER_CFLAGS = "";
 				OTHER_LDFLAGS = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -565,7 +945,25 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		C3FDE51B17CCD4D900FD5A7D /* Build configuration list for PBXLegacyTarget "SWIG Generator" */ = {
+		C3B0994B17CE128500204B3C /* Build configuration list for PBXNativeTarget "LuaMeadowiOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C3B0994C17CE128500204B3C /* Debug */,
+				C3B0994D17CE128500204B3C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C3B0995617CE1EAB00204B3C /* Build configuration list for PBXLegacyTarget "SWIG OBJ-C Generator" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C3B0995717CE1EAB00204B3C /* Debug */,
+				C3B0995817CE1EAB00204B3C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C3FDE51B17CCD4D900FD5A7D /* Build configuration list for PBXLegacyTarget "SWIG C++ Generator" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				C3FDE51C17CCD4D900FD5A7D /* Debug */,
