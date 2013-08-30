@@ -61,6 +61,7 @@
 		C3B0994617CE128500204B3C /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = C3B0994517CE128500204B3C /* Default.png */; };
 		C3B0994817CE128500204B3C /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C3B0994717CE128500204B3C /* Default@2x.png */; };
 		C3B0994A17CE128500204B3C /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C3B0994917CE128500204B3C /* Default-568h@2x.png */; };
+		C3D7671817D0BCEC00897CA4 /* liblua.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C3EED83A17CCF7BF00CB79DD /* liblua.a */; };
 		C3EAF9F317CA153100A508F8 /* DWApplication.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C3EAF9F117CA153100A508F8 /* DWApplication.cpp */; };
 		C3EAF9F717CA761200A508F8 /* DWMediator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C3EAF9F517CA761200A508F8 /* DWMediator.cpp */; };
 		C3EAFA6A17CA8FC200A508F8 /* app.lua in CopyFiles */ = {isa = PBXBuildFile; fileRef = C3EAF9F917CA8EE000A508F8 /* app.lua */; };
@@ -100,7 +101,6 @@
 		C3EAFA8C17CA8FC200A508F8 /* text.lua in CopyFiles */ = {isa = PBXBuildFile; fileRef = C3EAFA1B17CA8EE000A508F8 /* text.lua */; };
 		C3EAFA8D17CA8FC200A508F8 /* utils.lua in CopyFiles */ = {isa = PBXBuildFile; fileRef = C3EAFA1C17CA8EE000A508F8 /* utils.lua */; };
 		C3EAFA8E17CA8FC200A508F8 /* xml.lua in CopyFiles */ = {isa = PBXBuildFile; fileRef = C3EAFA1D17CA8EE000A508F8 /* xml.lua */; };
-		C3EED83B17CCF7BF00CB79DD /* liblua.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C3EED83A17CCF7BF00CB79DD /* liblua.a */; };
 		C3EED83E17CCFAEE00CB79DD /* dire.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C3EED83D17CCFAEE00CB79DD /* dire.cpp */; };
 		C3EED84017CD462600CB79DD /* external.lua in CopyFiles */ = {isa = PBXBuildFile; fileRef = C3EED83F17CD461700CB79DD /* external.lua */; };
 		FD2470FAE9B6E2173C1DC7F0 /* DWController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FD247ACE4E2218207B9160F8 /* DWController.cpp */; };
@@ -243,7 +243,7 @@
 
 /* Begin PBXFileReference section */
 		136D7212E5EB4FB4A6A2E912 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
-		C3111DC617CE6FA800B7B2EE /* libPods.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libPods.a; path = "Pods/build/Release-iphoneos/libPods.a"; sourceTree = "<group>"; };
+		1E4DED1F96FE435BAAFFB289 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3111DCA17CE73A000B7B2EE /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.1.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 		C3111DCC17CE73A800B7B2EE /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.1.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		C3111DCE17CE73B300B7B2EE /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.1.sdk/System/Library/Frameworks/CoreGraphics.framework; sourceTree = DEVELOPER_DIR; };
@@ -253,9 +253,6 @@
 		C34B5BB717C2707400C073A6 /* LuaMeadow.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; name = LuaMeadow.1; path = LuaMeadow/LuaMeadow.1; sourceTree = "<group>"; };
 		C34B5CE317C27D5A00C073A6 /* luascript.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = luascript.lua; sourceTree = "<group>"; };
 		C3B0993117CE128400204B3C /* LuaMeadowiOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LuaMeadowiOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		C3B0993317CE128500204B3C /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
-		C3B0993517CE128500204B3C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		C3B0993717CE128500204B3C /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = Library/Frameworks/CoreGraphics.framework; sourceTree = DEVELOPER_DIR; };
 		C3B0993B17CE128500204B3C /* LuaMeadowiOS-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "LuaMeadowiOS-Info.plist"; sourceTree = "<group>"; };
 		C3B0993D17CE128500204B3C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		C3B0993F17CE128500204B3C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -325,7 +322,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C3EED83B17CCF7BF00CB79DD /* liblua.a in Frameworks */,
+				C3D7671817D0BCEC00897CA4 /* liblua.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -346,10 +343,6 @@
 		C34B5BA917C2707400C073A6 = {
 			isa = PBXGroup;
 			children = (
-				C3111DD017CE73C300B7B2EE /* libPods.a */,
-				C3111DCE17CE73B300B7B2EE /* CoreGraphics.framework */,
-				C3111DCC17CE73A800B7B2EE /* Foundation.framework */,
-				C3111DCA17CE73A000B7B2EE /* UIKit.framework */,
 				C3B0992C17CE11D500204B3C /* LuaMedow c++ */,
 				C3EED83A17CCF7BF00CB79DD /* liblua.a */,
 				C34B5BB417C2707400C073A6 /* LuaMeadow */,
@@ -395,10 +388,11 @@
 		C3B0993217CE128500204B3C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				C3111DC617CE6FA800B7B2EE /* libPods.a */,
-				C3B0993317CE128500204B3C /* UIKit.framework */,
-				C3B0993517CE128500204B3C /* Foundation.framework */,
-				C3B0993717CE128500204B3C /* CoreGraphics.framework */,
+				C3111DD017CE73C300B7B2EE /* libPods.a */,
+				C3111DCE17CE73B300B7B2EE /* CoreGraphics.framework */,
+				C3111DCC17CE73A800B7B2EE /* Foundation.framework */,
+				C3111DCA17CE73A000B7B2EE /* UIKit.framework */,
+				1E4DED1F96FE435BAAFFB289 /* libPods.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -536,7 +530,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C34B5BBB17C2707400C073A6 /* Build configuration list for PBXNativeTarget "LuaMeadow" */;
 			buildPhases = (
-				7C2A5DCC976F44FB9C0AD793 /* Check Pods Manifest.lock */,
 				C34B5BAE17C2707400C073A6 /* Sources */,
 				C34B5BAF17C2707400C073A6 /* Frameworks */,
 				C34B5BB017C2707400C073A6 /* CopyFiles */,
@@ -618,21 +611,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		7C2A5DCC976F44FB9C0AD793 /* Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
 		A1ADB0D87A0546BA9AB3DD42 /* Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -780,7 +758,6 @@
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				GCC_VERSION = "";
-				"HEADER_SEARCH_PATHS[arch=*]" = "\"$(SRCROOT)/libs/lua-5.2.2/src\"";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/libs/lua-5.2.2/src\"",
@@ -788,6 +765,7 @@
 				);
 				LINK_WITH_STANDARD_LIBRARIES = YES;
 				MACH_O_TYPE = mh_execute;
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = macosx;
 			};
@@ -806,6 +784,7 @@
 				);
 				LINK_WITH_STANDARD_LIBRARIES = YES;
 				MACH_O_TYPE = mh_execute;
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = macosx;
 			};
