@@ -3,6 +3,7 @@
 #define OBJC_CLASS(name) typedef struct objc_object name
 
 %include "DWMediator.hpp"
+%include "DWController.hpp"
 
 %luacode {
     print('copy direwolf in global namespace')

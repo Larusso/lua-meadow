@@ -10,6 +10,8 @@
 
 //#define to_cString(s) ([s cStringUsingEncoding:[NSString defaultCStringEncoding]])
 
+extern int luaopen_direwolf(lua_State* L);
+
 const char* to_cString(NSString* s){
     return [s cStringUsingEncoding:[NSString defaultCStringEncoding]];
 }

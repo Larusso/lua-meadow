@@ -19,7 +19,7 @@
 
 %rename(Mediator) DWMediatorImpl;
 %ignore doSomething();
-%ignore init(void);
+%ignore wrapped;
 #endif
 
 OBJC_CLASS(DWMediator);
@@ -35,7 +35,6 @@ public:
     void move(int x, int y);
     void doSomething();
     
-private:
     DWMediator *wrapped;
 };
 

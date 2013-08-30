@@ -10,8 +10,6 @@
 #include "lualib.h"
 #include "lauxlib.h"
 
-extern int luaopen_direwolf(lua_State* L);
-
 @interface DWViewController : UIViewController
 {
     NSString *luaFilePath;

@@ -12,6 +12,8 @@
 {
     
 }
++ (id) initFromExtern;
+
 - (void) release_me;
 - (void) printType;
 - (void) move:(int) x andY:(int) y;

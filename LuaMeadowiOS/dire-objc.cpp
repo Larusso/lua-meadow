@@ -1644,10 +1644,11 @@ SWIG_Lua_dostring(lua_State *L, const char* str) {
 
 /* -------- TYPES TABLE (BEGIN) -------- */
 
-#define SWIGTYPE_p_DWMediatorImpl swig_types[0]
-#define SWIGTYPE_p_objc_object swig_types[1]
-static swig_type_info *swig_types[3];
-static swig_module_info swig_module = {swig_types, 2, 0, 0, 0, 0};
+#define SWIGTYPE_p_DWControllerImpl swig_types[0]
+#define SWIGTYPE_p_DWMediatorImpl swig_types[1]
+#define SWIGTYPE_p_objc_object swig_types[2]
+static swig_type_info *swig_types[4];
+static swig_module_info swig_module = {swig_types, 3, 0, 0, 0, 0};
 #define SWIG_TypeQuery(name) SWIG_TypeQueryModule(&swig_module, &swig_module, name)
 #define SWIG_MangledTypeQuery(name) SWIG_MangledTypeQueryModule(&swig_module, &swig_module, name)
 
@@ -1666,6 +1667,11 @@ typedef struct{} LANGUAGE_OBJ;
 
 #include <iostream>
 #include "DWMediator.hpp"
+
+
+#import <iostream>
+#import "DWController.hpp"
+#import "DWMediator.hpp"
 
 #ifdef __cplusplus
 extern "C" {
@@ -1779,6 +1785,92 @@ static swig_lua_class *swig_DWMediatorImpl_bases[] = {0};
 static const char *swig_DWMediatorImpl_base_names[] = {0};
 static swig_lua_class _wrap_class_DWMediatorImpl = { "Mediator", &SWIGTYPE_p_DWMediatorImpl,_wrap_new_Mediator, swig_delete_Mediator, swig_DWMediatorImpl_methods, swig_DWMediatorImpl_attributes, swig_DWMediatorImpl_bases, swig_DWMediatorImpl_base_names };
 
+static int _wrap_new_Controller(lua_State* L) {
+  int SWIG_arg = 0;
+  DWControllerImpl *result = 0 ;
+  
+  SWIG_check_num_args("DWControllerImpl::DWControllerImpl",0,0)
+  result = (DWControllerImpl *)new DWControllerImpl();
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_DWControllerImpl,1); SWIG_arg++; 
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_Controller_release(lua_State* L) {
+  int SWIG_arg = 0;
+  DWControllerImpl *arg1 = (DWControllerImpl *) 0 ;
+  
+  SWIG_check_num_args("DWControllerImpl::release",1,1)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("DWControllerImpl::release",1,"DWControllerImpl *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_DWControllerImpl,0))){
+    SWIG_fail_ptr("Controller_release",1,SWIGTYPE_p_DWControllerImpl);
+  }
+  
+  (arg1)->release();
+  
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static int _wrap_Controller_registerView(lua_State* L) {
+  int SWIG_arg = 0;
+  DWControllerImpl *arg1 = (DWControllerImpl *) 0 ;
+  DWMediatorImpl *arg2 = (DWMediatorImpl *) 0 ;
+  
+  SWIG_check_num_args("DWControllerImpl::registerView",2,2)
+  if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("DWControllerImpl::registerView",1,"DWControllerImpl *");
+  if(!SWIG_isptrtype(L,2)) SWIG_fail_arg("DWControllerImpl::registerView",2,"DWMediatorImpl *");
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_DWControllerImpl,0))){
+    SWIG_fail_ptr("Controller_registerView",1,SWIGTYPE_p_DWControllerImpl);
+  }
+  
+  
+  if (!SWIG_IsOK(SWIG_ConvertPtr(L,2,(void**)&arg2,SWIGTYPE_p_DWMediatorImpl,0))){
+    SWIG_fail_ptr("Controller_registerView",2,SWIGTYPE_p_DWMediatorImpl);
+  }
+  
+  (arg1)->registerView(arg2);
+  
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static void swig_delete_Controller(void *obj) {
+DWControllerImpl *arg1 = (DWControllerImpl *) obj;
+delete arg1;
+}
+static swig_lua_method swig_DWControllerImpl_methods[] = {
+    {"release", _wrap_Controller_release}, 
+    {"registerView", _wrap_Controller_registerView}, 
+    {0,0}
+};
+static swig_lua_attribute swig_DWControllerImpl_attributes[] = {
+    {0,0,0}
+};
+static swig_lua_class *swig_DWControllerImpl_bases[] = {0};
+static const char *swig_DWControllerImpl_base_names[] = {0};
+static swig_lua_class _wrap_class_DWControllerImpl = { "Controller", &SWIGTYPE_p_DWControllerImpl,_wrap_new_Controller, swig_delete_Controller, swig_DWControllerImpl_methods, swig_DWControllerImpl_attributes, swig_DWControllerImpl_bases, swig_DWControllerImpl_base_names };
+
 #ifdef __cplusplus
 }
 #endif
@@ -1797,18 +1889,22 @@ static swig_lua_const_info swig_constants[] = {
 
 /* -------- TYPE CONVERSION AND EQUIVALENCE RULES (BEGIN) -------- */
 
+static swig_type_info _swigt__p_DWControllerImpl = {"_p_DWControllerImpl", "DWControllerImpl *", 0, 0, (void*)&_wrap_class_DWControllerImpl, 0};
 static swig_type_info _swigt__p_DWMediatorImpl = {"_p_DWMediatorImpl", "DWMediatorImpl *", 0, 0, (void*)&_wrap_class_DWMediatorImpl, 0};
-static swig_type_info _swigt__p_objc_object = {"_p_objc_object", "objc_object *|DWMediator *", 0, 0, (void*)0, 0};
+static swig_type_info _swigt__p_objc_object = {"_p_objc_object", "objc_object *|DWMediator *|DWController *", 0, 0, (void*)0, 0};
 
 static swig_type_info *swig_type_initial[] = {
+  &_swigt__p_DWControllerImpl,
   &_swigt__p_DWMediatorImpl,
   &_swigt__p_objc_object,
 };
 
+static swig_cast_info _swigc__p_DWControllerImpl[] = {  {&_swigt__p_DWControllerImpl, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_DWMediatorImpl[] = {  {&_swigt__p_DWMediatorImpl, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_objc_object[] = {  {&_swigt__p_objc_object, 0, 0, 0},{0, 0, 0, 0}};
 
 static swig_cast_info *swig_cast_initial[] = {
+  _swigc__p_DWControllerImpl,
   _swigc__p_DWMediatorImpl,
   _swigc__p_objc_object,
 };
