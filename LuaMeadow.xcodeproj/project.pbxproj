@@ -107,7 +107,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		C37E3C3D17CE5D5000DCCA9B /* PBXContainerItemProxy */ = {
+		C3FAF3CF17D08DD2004B7B5E /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = C34B5BAA17C2707400C073A6 /* Project object */;
 			proxyType = 1;
@@ -243,11 +243,11 @@
 
 /* Begin PBXFileReference section */
 		136D7212E5EB4FB4A6A2E912 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
-		C3111DC617CE6FA800B7B2EE /* libPods.a */ = {isa = PBXFileReference; lastKnownFileType = file; name = libPods.a; path = "Pods/build/Release-iphoneos/libPods.a"; sourceTree = "<group>"; };
+		C3111DC617CE6FA800B7B2EE /* libPods.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libPods.a; path = "Pods/build/Release-iphoneos/libPods.a"; sourceTree = "<group>"; };
 		C3111DCA17CE73A000B7B2EE /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.1.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 		C3111DCC17CE73A800B7B2EE /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.1.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		C3111DCE17CE73B300B7B2EE /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.1.sdk/System/Library/Frameworks/CoreGraphics.framework; sourceTree = DEVELOPER_DIR; };
-		C3111DD017CE73C300B7B2EE /* libPods.a */ = {isa = PBXFileReference; lastKnownFileType = file; name = libPods.a; path = "Pods/build/Release-iphoneos/libPods.a"; sourceTree = "<group>"; };
+		C3111DD017CE73C300B7B2EE /* libPods.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libPods.a; path = "Pods/build/Release-iphoneos/libPods.a"; sourceTree = "<group>"; };
 		C34B5BB217C2707400C073A6 /* LuaMeadow */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = LuaMeadow; sourceTree = BUILT_PRODUCTS_DIR; };
 		C34B5BB517C2707400C073A6 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = main.cpp; path = LuaMeadow/main.cpp; sourceTree = "<group>"; };
 		C34B5BB717C2707400C073A6 /* LuaMeadow.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; name = LuaMeadow.1; path = LuaMeadow/LuaMeadow.1; sourceTree = "<group>"; };
@@ -267,7 +267,7 @@
 		C3B0994917CE128500204B3C /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		C3B0995117CE149A00204B3C /* DWMediator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DWMediator.h; sourceTree = "<group>"; };
 		C3B0995217CE149A00204B3C /* DWMediator.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = DWMediator.mm; sourceTree = "<group>"; };
-		C3B0995417CE184500204B3C /* DWMediator_CPP.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DWMediator_CPP.h; sourceTree = "<group>"; };
+		C3B0995417CE184500204B3C /* DWMediator.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = DWMediator.hpp; sourceTree = "<group>"; };
 		C3B0995917CE1EDD00204B3C /* dire-objc.i */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c.preprocessed; path = "dire-objc.i"; sourceTree = "<group>"; };
 		C3B0995B17CE1F7E00204B3C /* dire-objc.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = "dire-objc.cpp"; sourceTree = "<group>"; };
 		C3EAF9F117CA153100A508F8 /* DWApplication.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = DWApplication.cpp; path = LuaMeadow/DWApplication.cpp; sourceTree = "<group>"; };
@@ -314,6 +314,7 @@
 		C3EED83A17CCF7BF00CB79DD /* liblua.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = liblua.a; path = libs/liblua.a; sourceTree = "<group>"; };
 		C3EED83D17CCFAEE00CB79DD /* dire.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = dire.cpp; sourceTree = "<group>"; };
 		C3EED83F17CD461700CB79DD /* external.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = external.lua; sourceTree = "<group>"; };
+		C3FAF3CE17CFE303004B7B5E /* export.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = export.h; sourceTree = "<group>"; };
 		C3FDE51417CCCEE300FD5A7D /* dire.i */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c.preprocessed; name = dire.i; path = LuaMeadow/dire.i; sourceTree = "<group>"; };
 		FD2476D337B81B118CDB7EBD /* DWController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DWController.h; sourceTree = "<group>"; };
 		FD247ACE4E2218207B9160F8 /* DWController.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DWController.cpp; sourceTree = "<group>"; };
@@ -434,7 +435,8 @@
 				C3B0995B17CE1F7E00204B3C /* dire-objc.cpp */,
 				C3B0995117CE149A00204B3C /* DWMediator.h */,
 				C3B0995217CE149A00204B3C /* DWMediator.mm */,
-				C3B0995417CE184500204B3C /* DWMediator_CPP.h */,
+				C3B0995417CE184500204B3C /* DWMediator.hpp */,
+				C3FAF3CE17CFE303004B7B5E /* export.h */,
 			);
 			name = export;
 			sourceTree = "<group>";
@@ -501,7 +503,7 @@
 /* Begin PBXLegacyTarget section */
 		C3B0995517CE1EAB00204B3C /* SWIG OBJ-C Generator */ = {
 			isa = PBXLegacyTarget;
-			buildArgumentsString = "-c++ -lua -o dire-objc.cpp dire-objc.i";
+			buildArgumentsString = "-c++ -lua -nocpperraswarn -o dire-objc.cpp dire-objc.i";
 			buildConfigurationList = C3B0995617CE1EAB00204B3C /* Build configuration list for PBXLegacyTarget "SWIG OBJ-C Generator" */;
 			buildPhases = (
 			);
@@ -565,7 +567,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				C37E3C3E17CE5D5000DCCA9B /* PBXTargetDependency */,
+				C3FAF3D017D08DD2004B7B5E /* PBXTargetDependency */,
 			);
 			name = LuaMeadowiOS;
 			productName = LuaMeadowiOS;
@@ -689,10 +691,10 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		C37E3C3E17CE5D5000DCCA9B /* PBXTargetDependency */ = {
+		C3FAF3D017D08DD2004B7B5E /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = C3B0995517CE1EAB00204B3C /* SWIG OBJ-C Generator */;
-			targetProxy = C37E3C3D17CE5D5000DCCA9B /* PBXContainerItemProxy */;
+			targetProxy = C3FAF3CF17D08DD2004B7B5E /* PBXContainerItemProxy */;
 		};
 		C3FDE52017CCD7B800FD5A7D /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;

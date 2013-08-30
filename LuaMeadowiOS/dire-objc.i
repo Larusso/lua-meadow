@@ -1,6 +1,8 @@
 %module direwolf;
 
-%include "DWMediator_CPP.h"
+#define OBJC_CLASS(name) typedef struct objc_object name
+
+%include "DWMediator.hpp"
 
 %luacode {
     print('copy direwolf in global namespace')

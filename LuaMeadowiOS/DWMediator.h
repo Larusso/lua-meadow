@@ -7,7 +7,6 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "DWMediator_CPP.h"
 
 @interface DWMediator : NSObject
 {

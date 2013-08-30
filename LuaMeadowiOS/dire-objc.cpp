@@ -1645,8 +1645,9 @@ SWIG_Lua_dostring(lua_State *L, const char* str) {
 /* -------- TYPES TABLE (BEGIN) -------- */
 
 #define SWIGTYPE_p_DWMediatorImpl swig_types[0]
-static swig_type_info *swig_types[2];
-static swig_module_info swig_module = {swig_types, 1, 0, 0, 0, 0};
+#define SWIGTYPE_p_objc_object swig_types[1]
+static swig_type_info *swig_types[3];
+static swig_module_info swig_module = {swig_types, 2, 0, 0, 0, 0};
 #define SWIG_TypeQuery(name) SWIG_TypeQueryModule(&swig_module, &swig_module, name)
 #define SWIG_MangledTypeQuery(name) SWIG_MangledTypeQueryModule(&swig_module, &swig_module, name)
 
@@ -1664,7 +1665,7 @@ typedef struct{} LANGUAGE_OBJ;
 
 
 #include <iostream>
-#include "DWMediator_CPP.h"
+#include "DWMediator.hpp"
 
 #ifdef __cplusplus
 extern "C" {
@@ -1797,15 +1798,19 @@ static swig_lua_const_info swig_constants[] = {
 /* -------- TYPE CONVERSION AND EQUIVALENCE RULES (BEGIN) -------- */
 
 static swig_type_info _swigt__p_DWMediatorImpl = {"_p_DWMediatorImpl", "DWMediatorImpl *", 0, 0, (void*)&_wrap_class_DWMediatorImpl, 0};
+static swig_type_info _swigt__p_objc_object = {"_p_objc_object", "objc_object *|DWMediator *", 0, 0, (void*)0, 0};
 
 static swig_type_info *swig_type_initial[] = {
   &_swigt__p_DWMediatorImpl,
+  &_swigt__p_objc_object,
 };
 
 static swig_cast_info _swigc__p_DWMediatorImpl[] = {  {&_swigt__p_DWMediatorImpl, 0, 0, 0},{0, 0, 0, 0}};
+static swig_cast_info _swigc__p_objc_object[] = {  {&_swigt__p_objc_object, 0, 0, 0},{0, 0, 0, 0}};
 
 static swig_cast_info *swig_cast_initial[] = {
   _swigc__p_DWMediatorImpl,
+  _swigc__p_objc_object,
 };
 
 

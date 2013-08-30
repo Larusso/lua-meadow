@@ -6,21 +6,23 @@
 //  Copyright (c) 2013 Larusso. All rights reserved.
 //
 
-#ifndef LuaMeadow_DWMediator_CPP_h
-#define LuaMeadow_DWMediator_CPP_h
+#ifndef LuaMeadow_DWMediator_hpp
+#define LuaMeadow_DWMediator_hpp
 
 #include <iostream>
 
 #ifdef SWIG
 %{
 #include <iostream>
-#include "DWMediator_CPP.h"
+#include "DWMediator.hpp"
 %}
 
 %rename(Mediator) DWMediatorImpl;
 %ignore doSomething();
 %ignore init(void);
 #endif
+
+OBJC_CLASS(DWMediator);
 
 class DWMediatorImpl
 {
@@ -34,8 +36,7 @@ public:
     void doSomething();
     
 private:
-    void *instance;
+    DWMediator *wrapped;
 };
-
 
 #endif
