@@ -21,3 +21,12 @@ local external = dofile('external.lua')
 external:execute()
 
 mediator4 = Mediator()
+
+--[[
+for i=1,1000 do
+    local med = Mediator()
+    med:move(2*i,6*1)
+    med = nil
+    --collectgarbage()
+end
+--]]
