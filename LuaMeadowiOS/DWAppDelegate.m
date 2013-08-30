@@ -7,44 +7,20 @@
 //
 
 #import "DWAppDelegate.h"
-#define to_cString(s) ([s cStringUsingEncoding:[NSString defaultCStringEncoding]])
+#import "DWViewController.h"
 
 @implementation DWAppDelegate
-
-- (lua_State *)state {
-    if (!_state) {
-        _state = luaL_newstate();
-        luaL_openlibs(_state);
-        lua_settop(_state, 0);
-    }
-    
-    return _state;
-}
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
-    self.window.backgroundColor = [UIColor whiteColor];
-    [self.window makeKeyAndVisible];
     
-    NSString *luaPath = [[[NSBundle mainBundle] resourcePath] stringByAppendingString:@"/lua"];
-    NSString *mainLua = [luaPath stringByAppendingString:@"/luascript.lua"];
-    
-    chdir(to_cString(luaPath));
-    
-    NSLog(@"%@",mainLua);
-    lua_State *L = self.state;
-    luaL_openlibs(L);
-    luaopen_base(L);
-    luaopen_direwolf(L);
-    
-    if (luaL_dofile(L, to_cString(mainLua)))
-    {
-        fprintf(stderr, "error: %s\n", lua_tostring(L, -1));
-        lua_pop(L, 1);
-        //exit(1);
+    if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
+        self.viewController = [[DWViewController alloc] initWithNibName:@"LuaMeadow_iPhone" bundle:nil];
     }
+    self.window.rootViewController = self.viewController;
+    [self.window makeKeyAndVisible];
     return YES;
 }
 

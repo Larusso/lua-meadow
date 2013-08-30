@@ -7,17 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
-#include "lua.h"
-#include "lualib.h"
-#include "lauxlib.h"
 
-extern int luaopen_direwolf(lua_State* L);
+@class DWViewController;
 
 @interface DWAppDelegate : UIResponder <UIApplicationDelegate>
 {
 
 }
-@property (nonatomic) lua_State *state;
 @property (strong, nonatomic) UIWindow *window;
+@property (strong, nonatomic) DWViewController *viewController;
 
 @end
