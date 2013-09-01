@@ -7,10 +7,8 @@
 //
 
 #import "DWViewController.h"
-
-//#define to_cString(s) ([s cStringUsingEncoding:[NSString defaultCStringEncoding]])
-
-extern int luaopen_direwolf(lua_State* L);
+#import "DWMediator.h"
+#import "DWLuaContext.h"
 
 const char* to_cString(NSString* s){
     return [s cStringUsingEncoding:[NSString defaultCStringEncoding]];
@@ -22,26 +20,18 @@ const char* to_cString(NSString* s){
     [self run];
 }
 
-- (lua_State *)state {
-    if (!_state) {
-        _state = luaL_newstate();
-        luaL_openlibs(_state);
-        lua_settop(_state, 0);
-    }
-    
-    return _state;
-}
-
 - (void)run
 {
-    lua_State *L = self.state;
+    [[self luaContext] doFile:luaFilePath];
+    
+    /*lua_State *L = self.state;
 
     if (luaL_dofile(L, to_cString(luaFilePath)))
     {
         fprintf(stderr, "error: %s\n", lua_tostring(L, -1));
         lua_pop(L, 1);
         //exit(1);
-    }
+    }*/
 }
 
 - (void)viewDidLoad
@@ -49,16 +39,22 @@ const char* to_cString(NSString* s){
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
     
+    [self setLuaContext: [[DWLuaContext alloc]init]];
+    [[self luaContext] registerClass:[DWMediator class] as:@"Mediator"];
+    [[self luaContext] registerClass:[DWMediator class]];
+    
     NSString *luaPath = [[[NSBundle mainBundle] resourcePath] stringByAppendingString:@"/lua"];
     NSString *mainLua = [luaPath stringByAppendingString:@"/luascript.lua"];
     luaFilePath = mainLua;
     chdir(to_cString(luaPath));
     
+    /*
     NSLog(@"%@",mainLua);
     lua_State *L = self.state;
     luaL_openlibs(L);
     luaopen_base(L);
     luaopen_direwolf(L);
+    */
 }
 
 - (void)didReceiveMemoryWarning

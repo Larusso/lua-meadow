@@ -6,9 +6,7 @@
 //  Copyright (c) 2013 Larusso. All rights reserved.
 //
 
-#include "lua.h"
-#include "lualib.h"
-#include "lauxlib.h"
+@class DWLuaContext;
 
 @interface DWViewController : UIViewController
 {
@@ -16,5 +14,5 @@
 }
 - (void)run;
 - (IBAction)runLuaDown:(id)sender;
-@property (nonatomic) lua_State *state;
+@property (nonatomic, strong) DWLuaContext *luaContext;
 @end

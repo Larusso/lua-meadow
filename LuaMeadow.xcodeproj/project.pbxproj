@@ -7,54 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		C3111DC817CE72F800B7B2EE /* DWMediator.mm in Sources */ = {isa = PBXBuildFile; fileRef = C3B0995217CE149A00204B3C /* DWMediator.mm */; };
+		C3111DC817CE72F800B7B2EE /* DWMediator.m in Sources */ = {isa = PBXBuildFile; fileRef = C3B0995217CE149A00204B3C /* DWMediator.m */; };
 		C3111DC917CE72F800B7B2EE /* DWAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C3B0994317CE128500204B3C /* DWAppDelegate.m */; };
 		C3111DCB17CE73A000B7B2EE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3111DCA17CE73A000B7B2EE /* UIKit.framework */; };
 		C3111DCD17CE73A800B7B2EE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3111DCC17CE73A800B7B2EE /* Foundation.framework */; };
 		C3111DCF17CE73B300B7B2EE /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3111DCE17CE73B300B7B2EE /* CoreGraphics.framework */; };
 		C3111DD117CE73C300B7B2EE /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C3111DD017CE73C300B7B2EE /* libPods.a */; };
 		C343972517D0D7970015B087 /* LuaMeadow_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = C343972417D0D7970015B087 /* LuaMeadow_iPhone.xib */; };
-		C343972817D0FABE0015B087 /* DWController.mm in Sources */ = {isa = PBXBuildFile; fileRef = C343972717D0FABE0015B087 /* DWController.mm */; };
 		C345AE5917D132ED0043060E /* lua in Resources */ = {isa = PBXBuildFile; fileRef = C345AE5817D132ED0043060E /* lua */; };
-		C37E3C3F17CE5E2900DCCA9B /* dire-objc.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C3B0995B17CE1F7E00204B3C /* dire-objc.cpp */; };
+		C345AE5B17D1391E0043060E /* DWViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C3D7671C17D0BEDA00897CA4 /* DWViewController.m */; };
+		C345AE6117D3A4FD0043060E /* DWLuaContext.m in Sources */ = {isa = PBXBuildFile; fileRef = C345AE6017D3A4FC0043060E /* DWLuaContext.m */; };
 		C3B0993E17CE128500204B3C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C3B0993C17CE128500204B3C /* InfoPlist.strings */; };
 		C3B0994017CE128500204B3C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C3B0993F17CE128500204B3C /* main.m */; };
 		C3B0994617CE128500204B3C /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = C3B0994517CE128500204B3C /* Default.png */; };
 		C3B0994817CE128500204B3C /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C3B0994717CE128500204B3C /* Default@2x.png */; };
 		C3B0994A17CE128500204B3C /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C3B0994917CE128500204B3C /* Default-568h@2x.png */; };
-		C3D7671D17D0BEDA00897CA4 /* DWViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C3D7671C17D0BEDA00897CA4 /* DWViewController.m */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		C3FAF3CF17D08DD2004B7B5E /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = C34B5BAA17C2707400C073A6 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = C3B0995517CE1EAB00204B3C;
-			remoteInfo = "SWIG OBJ-C Generator";
-		};
-/* End PBXContainerItemProxy section */
-
-/* Begin PBXCopyFilesBuildPhase section */
-		C3111DD717CE77E200B7B2EE /* CopyFiles */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = lua/pl;
-			dstSubfolderSpec = 7;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		C3111DFD17CF2CA300B7B2EE /* CopyFiles */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = lua;
-			dstSubfolderSpec = 7;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		136D7212E5EB4FB4A6A2E912 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
@@ -64,11 +32,10 @@
 		C3111DCE17CE73B300B7B2EE /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.1.sdk/System/Library/Frameworks/CoreGraphics.framework; sourceTree = DEVELOPER_DIR; };
 		C3111DD017CE73C300B7B2EE /* libPods.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libPods.a; path = "Pods/build/Release-iphoneos/libPods.a"; sourceTree = "<group>"; };
 		C343972417D0D7970015B087 /* LuaMeadow_iPhone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LuaMeadow_iPhone.xib; sourceTree = "<group>"; };
-		C343972617D0FABE0015B087 /* DWController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DWController.h; sourceTree = "<group>"; };
-		C343972717D0FABE0015B087 /* DWController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = DWController.mm; sourceTree = "<group>"; };
-		C343972917D0FB850015B087 /* DWController.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = DWController.hpp; sourceTree = "<group>"; };
 		C343972A17D100430015B087 /* luaCallback.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = luaCallback.h; sourceTree = "<group>"; };
 		C345AE5817D132ED0043060E /* lua */ = {isa = PBXFileReference; lastKnownFileType = folder; path = lua; sourceTree = "<group>"; };
+		C345AE5F17D3A4FC0043060E /* DWLuaContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DWLuaContext.h; sourceTree = "<group>"; };
+		C345AE6017D3A4FC0043060E /* DWLuaContext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DWLuaContext.m; sourceTree = "<group>"; };
 		C3B0993117CE128400204B3C /* LuaMeadowiOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LuaMeadowiOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3B0993B17CE128500204B3C /* LuaMeadowiOS-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "LuaMeadowiOS-Info.plist"; sourceTree = "<group>"; };
 		C3B0993D17CE128500204B3C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -80,12 +47,11 @@
 		C3B0994717CE128500204B3C /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		C3B0994917CE128500204B3C /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		C3B0995117CE149A00204B3C /* DWMediator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DWMediator.h; sourceTree = "<group>"; };
-		C3B0995217CE149A00204B3C /* DWMediator.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = DWMediator.mm; sourceTree = "<group>"; };
-		C3B0995417CE184500204B3C /* DWMediator.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = DWMediator.hpp; sourceTree = "<group>"; };
+		C3B0995217CE149A00204B3C /* DWMediator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DWMediator.m; sourceTree = "<group>"; };
 		C3B0995917CE1EDD00204B3C /* dire-objc.i */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c.preprocessed; path = "dire-objc.i"; sourceTree = "<group>"; };
-		C3B0995B17CE1F7E00204B3C /* dire-objc.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = "dire-objc.cpp"; sourceTree = "<group>"; };
 		C3D7671B17D0BEDA00897CA4 /* DWViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DWViewController.h; sourceTree = "<group>"; };
 		C3D7671C17D0BEDA00897CA4 /* DWViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DWViewController.m; sourceTree = "<group>"; };
+		C3F1FE4017D3B781008B6DAC /* DWLuaBridgeDescription.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DWLuaBridgeDescription.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -145,6 +111,8 @@
 				C3B0993A17CE128500204B3C /* Supporting Files */,
 				C3B0995917CE1EDD00204B3C /* dire-objc.i */,
 				C343972A17D100430015B087 /* luaCallback.h */,
+				C345AE5F17D3A4FC0043060E /* DWLuaContext.h */,
+				C345AE6017D3A4FC0043060E /* DWLuaContext.m */,
 			);
 			path = LuaMeadowiOS;
 			sourceTree = "<group>";
@@ -167,35 +135,14 @@
 		C3B0995017CE146A00204B3C /* export */ = {
 			isa = PBXGroup;
 			children = (
-				C3B0995B17CE1F7E00204B3C /* dire-objc.cpp */,
 				C3B0995117CE149A00204B3C /* DWMediator.h */,
-				C3B0995217CE149A00204B3C /* DWMediator.mm */,
-				C3B0995417CE184500204B3C /* DWMediator.hpp */,
-				C343972617D0FABE0015B087 /* DWController.h */,
-				C343972717D0FABE0015B087 /* DWController.mm */,
-				C343972917D0FB850015B087 /* DWController.hpp */,
+				C3B0995217CE149A00204B3C /* DWMediator.m */,
+				C3F1FE4017D3B781008B6DAC /* DWLuaBridgeDescription.h */,
 			);
 			name = export;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
-
-/* Begin PBXLegacyTarget section */
-		C3B0995517CE1EAB00204B3C /* SWIG OBJ-C Generator */ = {
-			isa = PBXLegacyTarget;
-			buildArgumentsString = "-c++ -lua -nocpperraswarn -o dire-objc.cpp dire-objc.i";
-			buildConfigurationList = C3B0995617CE1EAB00204B3C /* Build configuration list for PBXLegacyTarget "SWIG OBJ-C Generator" */;
-			buildPhases = (
-			);
-			buildToolPath = swig;
-			buildWorkingDirectory = /Users/larusso/work/projects/larusso/LuaMeadow/LuaMeadowiOS;
-			dependencies = (
-			);
-			name = "SWIG OBJ-C Generator";
-			passBuildSettingsInEnvironment = 1;
-			productName = "SWIG Generator";
-		};
-/* End PBXLegacyTarget section */
 
 /* Begin PBXNativeTarget section */
 		C3B0993017CE128400204B3C /* LuaMeadowiOS */ = {
@@ -206,13 +153,10 @@
 				C3B0992E17CE128400204B3C /* Frameworks */,
 				C3B0992F17CE128400204B3C /* Resources */,
 				C3111DC317CE69AC00B7B2EE /* Copy Pods Resources */,
-				C3111DD717CE77E200B7B2EE /* CopyFiles */,
-				C3111DFD17CF2CA300B7B2EE /* CopyFiles */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				C3FAF3D017D08DD2004B7B5E /* PBXTargetDependency */,
 			);
 			name = LuaMeadowiOS;
 			productName = LuaMeadowiOS;
@@ -241,7 +185,6 @@
 			projectRoot = "";
 			targets = (
 				C3B0993017CE128400204B3C /* LuaMeadowiOS */,
-				C3B0995517CE1EAB00204B3C /* SWIG OBJ-C Generator */,
 			);
 		};
 /* End PBXProject section */
@@ -284,24 +227,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C3111DC817CE72F800B7B2EE /* DWMediator.mm in Sources */,
+				C345AE5B17D1391E0043060E /* DWViewController.m in Sources */,
+				C3111DC817CE72F800B7B2EE /* DWMediator.m in Sources */,
 				C3111DC917CE72F800B7B2EE /* DWAppDelegate.m in Sources */,
-				C37E3C3F17CE5E2900DCCA9B /* dire-objc.cpp in Sources */,
 				C3B0994017CE128500204B3C /* main.m in Sources */,
-				C3D7671D17D0BEDA00897CA4 /* DWViewController.m in Sources */,
-				C343972817D0FABE0015B087 /* DWController.mm in Sources */,
+				C345AE6117D3A4FD0043060E /* DWLuaContext.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		C3FAF3D017D08DD2004B7B5E /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = C3B0995517CE1EAB00204B3C /* SWIG OBJ-C Generator */;
-			targetProxy = C3FAF3CF17D08DD2004B7B5E /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		C3B0993C17CE128500204B3C /* InfoPlist.strings */ = {
@@ -397,10 +331,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				MACOSX_DEPLOYMENT_TARGET = "";
-				OTHER_LDFLAGS = (
-					"-v",
-					"-lc++",
-				);
+				OTHER_LDFLAGS = "-v";
 				PODS_ROOT = "${SRCROOT}/Pods";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
@@ -430,39 +361,13 @@
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				MACOSX_DEPLOYMENT_TARGET = "";
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
-				OTHER_LDFLAGS = (
-					"-v",
-					"-lc++",
-				);
+				OTHER_LDFLAGS = "-v";
 				PODS_ROOT = "${SRCROOT}/Pods";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = 1;
 				VALIDATE_PRODUCT = YES;
 				WRAPPER_EXTENSION = app;
-			};
-			name = Release;
-		};
-		C3B0995717CE1EAB00204B3C /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
-				DEBUGGING_SYMBOLS = YES;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				OTHER_CFLAGS = "";
-				OTHER_LDFLAGS = "";
-				PRODUCT_NAME = "SWIG C++ Generator copy";
-			};
-			name = Debug;
-		};
-		C3B0995817CE1EAB00204B3C /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
-				OTHER_CFLAGS = "";
-				OTHER_LDFLAGS = "";
-				PRODUCT_NAME = "SWIG C++ Generator copy";
 			};
 			name = Release;
 		};
@@ -483,15 +388,6 @@
 			buildConfigurations = (
 				C3B0994C17CE128500204B3C /* Debug */,
 				C3B0994D17CE128500204B3C /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		C3B0995617CE1EAB00204B3C /* Build configuration list for PBXLegacyTarget "SWIG OBJ-C Generator" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				C3B0995717CE1EAB00204B3C /* Debug */,
-				C3B0995817CE1EAB00204B3C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

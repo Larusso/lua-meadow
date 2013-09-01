@@ -7,15 +7,13 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "DWLuaBridgeDescription.h"
 
-@interface DWMediator : NSObject
-{
-    
-}
-+ (id) initFromExtern;
+@interface DWMediator : NSObject<DWLuaBridgeDescription>
 
 - (void) release_me;
 - (void) printType;
 - (void) move:(int) x andY:(int) y;
 - (void) doSomething;
+
 @end
