@@ -9,9 +9,15 @@
 #import "DWViewController.h"
 #import "DWMediator.h"
 #import "DWLuaContext.h"
+#import "DWLuaModuleDescription.h"
 
 const char* to_cString(NSString* s){
     return [s cStringUsingEncoding:[NSString defaultCStringEncoding]];
+}
+
+extern NSString* to_objcString(const char *s)
+{
+    return [NSString stringWithCString:s encoding:[NSString defaultCStringEncoding]];
 }
 
 @implementation DWViewController
@@ -40,11 +46,16 @@ const char* to_cString(NSString* s){
 	// Do any additional setup after loading the view, typically from a nib.
     
     [self setLuaContext: [[DWLuaContext alloc]init]];
-    [[self luaContext] registerClass:[DWMediator class] as:@"Mediator"];
-    [[self luaContext] registerClass:[DWMediator class]];
+    
+    DWLuaModuleDescription *module = [DWLuaModuleDescription descriptorWithName:@"direwolf"];
+    [module registerClass:[DWMediator class] as:@"Mediator"];
+    [module registerClass:[DWMediator class]];
+    [[self luaContext] registerModule:module];
     
     NSString *luaPath = [[[NSBundle mainBundle] resourcePath] stringByAppendingString:@"/lua"];
     NSString *mainLua = [luaPath stringByAppendingString:@"/luascript.lua"];
+    
+    NSLog(@"%@",mainLua);
     luaFilePath = mainLua;
     chdir(to_cString(luaPath));
     

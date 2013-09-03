@@ -10,11 +10,16 @@
 #include "lua.h"
 #include "lualib.h"
 #include "lauxlib.h"
-
+@class DWLuaModuleDescription;
 @interface DWLuaContext : NSObject
+{
+    lua_State *state;
+    NSMutableDictionary *_modules;
+}
+
+@property(nonatomic,strong,readonly)NSDictionary *modules;
+
 - (void)doFile:(NSString *)path;
-- (void)registerClass:(Class)class;
-- (void)registerClass:(Class)class as:(NSString*)luaClassName;
-- (void)registerClass:(Class)class andIncludeSelectors:(NSSet *)includedSelectors;
-- (void)registerClass:(Class)class as:(NSString*)luaClassName andIncludeSelectors:(NSSet *)includedSelectors;
+- (void)registerModule:(DWLuaModuleDescription *)module;
+
 @end

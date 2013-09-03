@@ -22,6 +22,8 @@
 		C3B0994617CE128500204B3C /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = C3B0994517CE128500204B3C /* Default.png */; };
 		C3B0994817CE128500204B3C /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C3B0994717CE128500204B3C /* Default@2x.png */; };
 		C3B0994A17CE128500204B3C /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C3B0994917CE128500204B3C /* Default-568h@2x.png */; };
+		C3F1FE4717D3DEDB008B6DAC /* DWLuaModuleDescription.m in Sources */ = {isa = PBXBuildFile; fileRef = C3F1FE4617D3DEDB008B6DAC /* DWLuaModuleDescription.m */; };
+		C3F1FE4A17D4A849008B6DAC /* DWLuaClassBridgeDescription.m in Sources */ = {isa = PBXBuildFile; fileRef = C3F1FE4917D4A849008B6DAC /* DWLuaClassBridgeDescription.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +54,10 @@
 		C3D7671B17D0BEDA00897CA4 /* DWViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DWViewController.h; sourceTree = "<group>"; };
 		C3D7671C17D0BEDA00897CA4 /* DWViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DWViewController.m; sourceTree = "<group>"; };
 		C3F1FE4017D3B781008B6DAC /* DWLuaBridgeDescription.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DWLuaBridgeDescription.h; sourceTree = "<group>"; };
+		C3F1FE4517D3DEDB008B6DAC /* DWLuaModuleDescription.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DWLuaModuleDescription.h; sourceTree = "<group>"; };
+		C3F1FE4617D3DEDB008B6DAC /* DWLuaModuleDescription.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DWLuaModuleDescription.m; sourceTree = "<group>"; };
+		C3F1FE4817D4A849008B6DAC /* DWLuaClassBridgeDescription.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DWLuaClassBridgeDescription.h; sourceTree = "<group>"; };
+		C3F1FE4917D4A849008B6DAC /* DWLuaClassBridgeDescription.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DWLuaClassBridgeDescription.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,8 +117,7 @@
 				C3B0993A17CE128500204B3C /* Supporting Files */,
 				C3B0995917CE1EDD00204B3C /* dire-objc.i */,
 				C343972A17D100430015B087 /* luaCallback.h */,
-				C345AE5F17D3A4FC0043060E /* DWLuaContext.h */,
-				C345AE6017D3A4FC0043060E /* DWLuaContext.m */,
+				C3F1FE4117D3D288008B6DAC /* lua bridge */,
 			);
 			path = LuaMeadowiOS;
 			sourceTree = "<group>";
@@ -140,6 +145,19 @@
 				C3F1FE4017D3B781008B6DAC /* DWLuaBridgeDescription.h */,
 			);
 			name = export;
+			sourceTree = "<group>";
+		};
+		C3F1FE4117D3D288008B6DAC /* lua bridge */ = {
+			isa = PBXGroup;
+			children = (
+				C345AE5F17D3A4FC0043060E /* DWLuaContext.h */,
+				C345AE6017D3A4FC0043060E /* DWLuaContext.m */,
+				C3F1FE4517D3DEDB008B6DAC /* DWLuaModuleDescription.h */,
+				C3F1FE4617D3DEDB008B6DAC /* DWLuaModuleDescription.m */,
+				C3F1FE4817D4A849008B6DAC /* DWLuaClassBridgeDescription.h */,
+				C3F1FE4917D4A849008B6DAC /* DWLuaClassBridgeDescription.m */,
+			);
+			name = "lua bridge";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -232,6 +250,8 @@
 				C3111DC917CE72F800B7B2EE /* DWAppDelegate.m in Sources */,
 				C3B0994017CE128500204B3C /* main.m in Sources */,
 				C345AE6117D3A4FD0043060E /* DWLuaContext.m in Sources */,
+				C3F1FE4717D3DEDB008B6DAC /* DWLuaModuleDescription.m in Sources */,
+				C3F1FE4A17D4A849008B6DAC /* DWLuaClassBridgeDescription.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

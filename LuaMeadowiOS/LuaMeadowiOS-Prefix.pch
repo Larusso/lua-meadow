@@ -13,8 +13,5 @@
     #import <Foundation/Foundation.h>
 #endif
 
-#ifdef __OBJC__
-    #define OBJC_CLASS(name) @class name
-#else
-    #define OBJC_CLASS(name) typedef struct objc_object name
-#endif
+extern const char* to_cString(NSString* s);
+extern NSString* to_objcString(const char *s);

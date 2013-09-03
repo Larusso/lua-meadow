@@ -1,32 +1,27 @@
 
 local pretty = require 'pl.pretty'
+local direwolf = require 'direwolf'
 
+print("ns direwolf:")
 pretty.dump(direwolf)
-m = getmetatable(direwolf)
 
-pretty.dump(m)
+local mediatorClass = direwolf.Mediator
+local mt_m = getmetatable(mediatorClass)
 
-local mediator = direwolf.Mediator()
-print(mediator)
+print("metatable mediator class:")
+pretty.dump(mt_m);
 
-m = getmetatable(mediator)
-pretty.dump(m)
 
-mediator:move(20,30)
+local mediator = direwolf.Mediator:new()
 
-controller = direwolf.Controller()
-controller:registerView(mediator)
+print("mediator instance:")
+pretty.dump(mediator)
 
-local external = dofile('external.lua')
-external:execute()
+local mt = getmetatable(mediator)
 
-mediator4 = Mediator()
+print("metatable mediator metatable:")
+pretty.dump(mt)
 
---[[
-for i=1,1000 do
-    local med = Mediator()
-    med:move(2*i,6*1)
-    med = nil
-    --collectgarbage()
-end
---]]
+local mt2 = getmetatable(mt)
+
+mediator:printType()
