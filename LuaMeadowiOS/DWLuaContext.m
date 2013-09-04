@@ -51,9 +51,53 @@ static int callMethod(lua_State *L)
     return 0;
 }
 
-static int initClassMetatable(lua_State *L, const char* mt, const char* ns)
+static int setBaseMetatableValue(lua_State *L, const char* mt, const char* ns, const char* className)
 {
-    lua_pop(L, 1);
+    lua_pushstring(L, mt);
+    lua_setfield(L, -2, "__mt");
+    
+    lua_pushstring(L, ns);
+    lua_setfield(L, -2, "__ns");
+    
+    lua_pushstring(L, className);
+    lua_setfield(L, -2, "__class");
+    
+#ifdef MT_PROTECTED
+    lua_pushstring(L, "protected");
+    lua_setfield(L, -2, "__metatable");
+#endif
+
+    return 1;
+}
+
+static int instanceToString(lua_State* L)
+{
+    int n = lua_gettop(L); // Number of arguments
+    if (n != 1)
+      return luaL_error(L, "Got %d arguments expected 1 (class or self)", n);
+    
+    int t = lua_type(L, 1);
+    
+    if(t == LUA_TTABLE)
+    {
+        lua_getmetatable(L, 1);
+        lua_getfield(L, -1, "__mt");
+        char const* mt = lua_tostring(L, -1);
+        lua_pop(L, 1);
+        
+        lua_getfield(L, -1, "__self");
+        struct objc_object **inst = (struct objc_object **)luaL_checkudata(L, -1, mt);
+        lua_pushstring(L, to_cString([(__bridge id)(*inst) description]));
+        return 1;
+    }
+        
+    lua_pushstring(L, "toString");
+    return 1;
+}
+
+
+static int createClassMetatable(lua_State *L, const char* mt, const char* ns, const char* className)
+{
     luaL_newmetatable(L, mt);
     
     DWLuaModuleDescription *moduleDescriptor = [[context modules] objectForKey:to_objcString(ns)];
@@ -64,6 +108,13 @@ static int initClassMetatable(lua_State *L, const char* mt, const char* ns)
         lua_pushcfunction(L, callMethod);
         lua_setfield(L, -2, to_cString(selector));
     }
+    
+    lua_pushcfunction(L, instanceToString);
+    lua_setfield(L, -2, "__tostring");
+    
+    setBaseMetatableValue(L, mt, ns, className);
+    lua_pushvalue(L, -1);
+    lua_setfield(L, -2, "__index");
         
     return 1;
 }
@@ -72,19 +123,7 @@ static int initClassFactoryMetatable(lua_State *L, const char* ns, const char* c
 {
     const char* mt = to_cString([NSString stringWithFormat:@"%s.%s",ns,className]);
     luaL_newmetatable(L, to_cString([NSString stringWithFormat:@"%s.%s",mt,"factory"]));
-    
-    lua_pushstring(L, mt);
-    lua_setfield(L, -2, "__mt");
-    
-    lua_pushstring(L, ns);
-    lua_setfield(L, -2, "__ns");
-    
-    lua_pushstring(L, className);
-    lua_setfield(L, -2, "__class");
-    
-    lua_pushstring(L, "protected");
-    lua_setfield(L, -2, "__metatable");
-    
+    setBaseMetatableValue(L, mt, ns, className);
     return 1;
 }
 
@@ -95,9 +134,7 @@ static int newInstance(lua_State *L)
         return luaL_error(L, "Got %d arguments expected 1 (class)", n);
     // First argument is now a table that represent the class to instantiate
     luaL_checktype(L, 1, LUA_TTABLE);
-    
     lua_getmetatable(L, 1);
-
     lua_getfield(L, -1, "__class");
     const char* className = lua_tostring(L, -1);
     lua_pop(L, 1);
@@ -111,17 +148,13 @@ static int newInstance(lua_State *L)
     lua_pop(L, 1);
     
     lua_newtable(L);
-    lua_pushvalue(L, -2);
     luaL_getmetatable(L, mt);
     
     if(lua_isnil(L, -1))
     {
-        initClassMetatable(L,mt,ns);
+        lua_pop(L, 1);
+        createClassMetatable(L,mt,ns,className);
     }
-    
-    lua_setfield(L, -2, "__index");
-        
-    lua_setmetatable(L, -2);
     
     // Allocate memory for a pointer to to object
     Class class = NSClassFromString(to_objcString(className));
@@ -129,7 +162,15 @@ static int newInstance(lua_State *L)
     struct objc_object **lgo = (struct objc_object **)lua_newuserdata(L, sizeof(class));
     *lgo = go;
     
-    lua_setfield(L, -2, "__self");
+    lua_pushvalue(L, -1);
+    lua_setfield(L, -3, "__self");
+    
+    lua_pushvalue(L, -2);
+    lua_setmetatable(L, -2);
+    
+    lua_pop(L, 1);
+    lua_setmetatable(L, -2);
+    
     return 1;
 }
 

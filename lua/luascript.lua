@@ -15,6 +15,7 @@ pretty.dump(mt_m);
 local mediator = direwolf.Mediator:new()
 
 print("mediator instance:")
+print(mediator)
 pretty.dump(mediator)
 
 local mt = getmetatable(mediator)
@@ -22,6 +23,12 @@ local mt = getmetatable(mediator)
 print("metatable mediator metatable:")
 pretty.dump(mt)
 
-local mt2 = getmetatable(mt)
+local mt_self = getmetatable(mediator.__self)
 
-mediator:printType()
+print(mediator.__self)
+print(mt_self)
+
+print("metatable mediator __self:")
+pretty.dump(mt_self)
+
+--mediator:printType()
