@@ -13,6 +13,16 @@
 
 static DWLuaContext *context;
 
+static int traceback(lua_State *L) {
+    lua_getglobal(L, "debug");
+    lua_getfield(L, -1, "traceback");
+    lua_pushvalue(L, 1);
+    lua_pushinteger(L, 2);
+    lua_call(L, 2, 1);
+    fprintf(stderr, "%s\n", lua_tostring(L, -1));
+    return 1;
+}
+
 void stackdump_g(lua_State *l)
 {
     int i;
@@ -48,6 +58,23 @@ static int callMethod(lua_State *L)
     int n = lua_gettop(L); // Number of arguments
     if (n == 0)
         return luaL_error(L, "Got %d arguments expected at least 1 (class)", n);
+    
+    char const *fn = lua_tostring(L,lua_upvalueindex(1));
+    lua_getmetatable(L, 1);
+    lua_getfield(L, -1, "__mt");
+    char const* mt = lua_tostring(L, -1);
+    lua_pop(L, 1);
+    
+    lua_getfield(L, -1, "__self");
+    struct objc_object **inst = (struct objc_object **)luaL_checkudata(L, -1, mt);
+    
+    SEL selector = NSSelectorFromString(to_objcString(fn));
+    
+    NSMethodSignature * mySignature = [[(__bridge id)*inst class] instanceMethodSignatureForSelector:selector];
+    NSInvocation * myInvocation = [NSInvocation invocationWithMethodSignature:mySignature];
+    [myInvocation setTarget:(__bridge id)*inst];
+    [myInvocation setSelector:selector];
+    [myInvocation invoke];
     return 0;
 }
 
@@ -105,7 +132,8 @@ static int createClassMetatable(lua_State *L, const char* mt, const char* ns, co
     
     NSSet* selectors = [classDescriptor selectors];
     for(NSString* selector in selectors) {
-        lua_pushcfunction(L, callMethod);
+        lua_pushstring(L, to_cString(selector));
+        lua_pushcclosure(L, &callMethod,1);
         lua_setfield(L, -2, to_cString(selector));
     }
     
@@ -158,7 +186,7 @@ static int newInstance(lua_State *L)
     
     // Allocate memory for a pointer to to object
     Class class = NSClassFromString(to_objcString(className));
-    struct objc_object *go = (__bridge  struct objc_object *)([[class alloc] init]);
+    struct objc_object *go = (__bridge_retained struct objc_object *)([[class alloc] init]);
     struct objc_object **lgo = (struct objc_object **)lua_newuserdata(L, sizeof(class));
     *lgo = go;
     

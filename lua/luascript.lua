@@ -31,4 +31,4 @@ print(mt_self)
 print("metatable mediator __self:")
 pretty.dump(mt_self)
 
---mediator:printType()
+mediator:printType()
